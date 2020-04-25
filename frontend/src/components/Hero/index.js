@@ -2,13 +2,15 @@ import React from 'react';
 
 import styles from './index.module.scss';
 
-export default function Hero() {
+export default function Hero({ image, title, description }) {
+  const backgroundImage = { style: { backgroundImage: `url(${image}` } };
+
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} {...backgroundImage}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h1 className={styles.title}>Joyeria gold</h1>
-          <p>Lorem ipsum t amet consectetur adipisicinelit amet consectetur adipisicinelit</p>
+          <h1 className={styles.title}>{title}</h1>
+          <p>{description}</p>
         </div>
       </div>
     </div>
