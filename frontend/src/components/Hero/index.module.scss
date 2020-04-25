@@ -5,6 +5,10 @@
   background-position: center center;
 }
 
+/* .hero--2 {
+  margin-top: 4rem;
+} */
+
 .container {
   padding: 1rem;
   background: rgba(0, 0, 0, .5);
@@ -15,28 +19,55 @@
   align-items: center;
 }
 
+.containerReverse {
+  @extend .container;
+  align-items: flex-end;
+  flex: 1;
+}
+
 .content {
   color: white;
 }
 
+.contentReverse {
+  @extend .content;
+  align-self: flex-end;
+}
+
 @media screen and (min-width:768px) {
   .container {
-      -webkit-clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
-      clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
-      align-items: flex-start;
+    -webkit-clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
+    clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
+    align-items: flex-start;
   }
 
   .content {
-      margin-left: 5rem;
+    margin-left: 5rem;
   }
 
-  .content > p {
-      max-width: 48%;
+  .content>p,
+  .contentReverse>p {
+    max-width: 48%;
   }
 
   .title {
-      margin-bottom: 1rem;
-      max-width: 70%;
+    margin-bottom: 1rem;
+    max-width: 70%;
   }
 
+  .containerReverse {
+    -webkit-clip-path: polygon(100% 0, 25% 0%, 60% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 25% 0%, 60% 100%, 100% 100%);
+  }
+
+  .contentReverse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .titleReverse {
+    @extend .title;
+    margin-right: 3rem;
+  }
 }

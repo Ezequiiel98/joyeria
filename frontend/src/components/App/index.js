@@ -14,6 +14,7 @@ function App() {
         image={clock}
         description="Lorem ipsum t amet consectetur adipisicinelit amet consectetur adipisicinelit"
         title="Joyeria gold"
+        reverse
       />
     </>
   );
