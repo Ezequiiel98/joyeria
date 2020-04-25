@@ -13,12 +13,13 @@
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
+  }
 
-    &:hover::after {
-      width: 100%;
-    }
+  &:hover::after {
+    width: 100%;
   }
 }
+
 
 .linkMenu {
   color: #000000;
