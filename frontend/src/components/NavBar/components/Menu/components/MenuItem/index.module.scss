@@ -1,0 +1,28 @@
+.itemMenu {
+  padding: .8rem 1rem .5rem 1rem;
+}
+
+.itemMenu::after {
+  content: '';
+  width: 0;
+  display: block;
+  height: .3rem;
+  margin-top: .1rem;
+  background-color: #ffc0cb;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+
+}
+
+.itemMenu:hover::after {
+  width: 100%;
+}
+
+
+.linkMenu {
+  color: #000000;
+  font-size: 1.2rem;
+}

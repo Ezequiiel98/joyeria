@@ -1,0 +1,64 @@
+.nav {
+  background-color: #fff;
+  overflow: hidden;
+  border-bottom: 1px solid #ffc0cb;
+}
+
+.containerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2px;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo {
+  flex: 1;
+  padding: 8px 16px;
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+}
+
+.burgerMenu {
+  justify-self: flex-end;
+  font-size: 32px;
+}
+
+.logo p {
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.itemMenu {
+  padding: 12.8px 16px 8px 16px;
+
+  &::after {
+    content: '';
+    width: 0;
+    display: block;
+    height: 3.2px;
+    margin-top: 2px;
+    background-color: #ffc0cb;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.linkMenu {
+  color: #000000;
+  font-size: 1.2rem;
+}

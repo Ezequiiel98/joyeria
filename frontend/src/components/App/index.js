@@ -1,9 +1,11 @@
 import React from 'react';
 
+import NavBar from '../NavBar';
+
 import styles from './index.module.scss';
 
 function App() {
-  return <h1> Proyecto frontend </h1>;
+  return <NavBar />;
 }
 
 export default App;

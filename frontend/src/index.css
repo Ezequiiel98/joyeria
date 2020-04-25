@@ -11,3 +11,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  /* font-family: var(--Font-body); */
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--Font-title);
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Halant', serif;
+  font-weight: 200;
+}
+
+li {
+  list-style: none;
+}
+
+li,
+p,
+a {
+  font-family: 'Nunito Sans', serif;
+  font-weight: lighter;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/* .rojo{
+  color: red;
+  
+}
+.rojo-border{
+  border: 1px solid red;
+}
+.desabilitado{
+  opacity: .5;
+} */
