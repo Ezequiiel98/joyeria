@@ -11,7 +11,9 @@ export default function NavBar() {
           <p>Logo</p>
 
           <div className={styles.burgerMenu}>
-            <i className="fas fa-bars" />
+            <span className={styles.burgerIcon} />
+            <span className={styles.burgerIcon} />
+            <span className={styles.burgerIcon} />
           </div>
         </div>
         <Menu />

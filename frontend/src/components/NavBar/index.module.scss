@@ -27,38 +27,43 @@
 .burgerMenu {
   justify-self: flex-end;
   font-size: 32px;
+  position: relative;
+  width: 45px;
+  height: 40px;
+  margin-top: 2px;
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 
-.logo p {
+.burgerIcon {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 45px;
+  background-color: black;
+
+  &:nth-child(2) {
+    top: 14px;
+  }
+
+
+  &:nth-child(3) {
+    top: 28px;
+  }
+}
+
+.logo>p {
   font-size: 64px;
   margin: 0;
   padding: 0;
 }
 
-
-.itemMenu {
-  padding: 12.8px 16px 8px 16px;
-
-  &::after {
-    content: '';
-    width: 0;
-    display: block;
-    height: 3.2px;
-    margin-top: 2px;
-    background-color: #ffc0cb;
-    transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
+@media screen and (min-width: 768px) {
+  .burgerMenu {
+    display: none;
   }
-
-  &:hover::after {
-    width: 100%;
-  }
-}
-
-.linkMenu {
-  color: #000000;
-  font-size: 1.2rem;
 }
