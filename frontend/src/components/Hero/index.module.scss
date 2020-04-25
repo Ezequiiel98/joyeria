@@ -1,0 +1,43 @@
+.hero {
+  min-height: 86vh;
+  background-image: url(../img/12.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.container {
+  padding: 1rem;
+  background: rgba(0, 0, 0, .5);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  color: white;
+}
+
+@media screen and (min-width:768px) {
+  .container {
+      -webkit-clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
+      clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
+      align-items: flex-start;
+  }
+
+  .content {
+      margin-left: 5rem;
+  }
+
+  .content > p {
+      max-width: 48%;
+  }
+
+  .title {
+      margin-bottom: 1rem;
+      max-width: 70%;
+  }
+
+}
