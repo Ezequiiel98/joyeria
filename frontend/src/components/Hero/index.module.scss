@@ -45,10 +45,12 @@
   .contentReverse>p {
     max-width: 48%;
   }
-
+  .contentReverse>p {
+    max-width: 60%;
+  }
   .title {
     margin-bottom: 1rem;
-    max-width: 70%;
+    max-width: 68%;
   }
 
   .containerReverse {
@@ -64,6 +66,5 @@
 
   .titleReverse {
     @extend .title;
-    margin-right: 3rem;
   }
 }

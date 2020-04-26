@@ -9,7 +9,7 @@ export default function Hero({ image, title, description, reverse }) {
     <div className={styles.hero} {...backgroundImage}>
       <div className={reverse ? styles.containerReverse : styles.container}>
         <div className={reverse ? styles.contentReverse : styles.content}>
-          <h1 className={reverse ? styles.titleReverse : styles.title }>{title}</h1>
+          <h1 className={reverse ? styles.titleReverse : styles.title}>{title}</h1>
           <p>{description}</p>
         </div>
       </div>
