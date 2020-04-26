@@ -1,0 +1,35 @@
+.whatWeDo {
+  margin-top: 4rem;
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.containerImg {
+  padding: 1rem;
+  border: 1px solid #ffc0cb;
+  margin-bottom: 1rem;
+}
+
+.containerDesc {
+  background-color: white;
+}
+
+.title {
+  padding: rem;
+  margin-bottom: 1rem;
+}
+
+.containerDesc p {
+  text-align: left;
+}
