@@ -17,12 +17,12 @@ export default function Home() {
         description="Lorem ipsum t amet consectetur adipisicinelit amet consectetur adipisicinelit"
       />
       <AboutUs urlImg={imgAboutUs} />
-      {/*   <Hero
+         <Hero
         image={imgHero2}
         title="Diseño de anillos de casamiento"
         description="Lorem ipsum t amet consectetur adipisicinelit amet consectetur adipisicinelit"
         reverse
-      /> */}
+      /> 
     </>
   );
 }
