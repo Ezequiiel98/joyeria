@@ -4,6 +4,12 @@
   background-color: white;
 }
 
+.cardIcon {
+  @extend .card;
+  border: 1px solid #ffc0cb;
+  padding: 2rem;
+}
+
 .containerImg {
   padding: 1rem;
   border: 1px solid #ffc0cb;
@@ -21,3 +27,15 @@
 .containerDesc p {
   text-align: left;
 }
+
+.containerIcon {
+  font-size: 3rem;
+  color: white;
+  background-color: pink;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  -webkit-clip-path: circle(21% at 50% 50%);
+  clip-path: circle(21% at 50% 50%);
+}
+
+
