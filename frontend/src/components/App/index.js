@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavBar from '../NavBar';
 import Hero from '../Hero';
-
+import Footer from '../../screens/Footer';
 import clock from './9.jpg';
 import styles from './index.module.scss';
 
@@ -16,6 +16,7 @@ function App() {
         title="Joyeria gold"
         reverse
       />
+      <Footer />
     </>
   );
 }
