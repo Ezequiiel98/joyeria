@@ -17,5 +17,10 @@
   display: flex;
   flex-direction: column;
   padding-left: 0;
-  align-items: flex-end;
+  align-items: center;
+  transform: translateX(-0.7rem);
+  -webkit-transform: translateX(-0.7rem);
+  -moz-transform: translateX(-0.7rem);
+  -ms-transform: translateX(-0.7rem);
+  -o-transform: translateX(-0.7rem);
 }

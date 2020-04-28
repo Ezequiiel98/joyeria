@@ -20,6 +20,11 @@
   }
 }
 
+.itemMenuColumn {
+  @extend .itemMenu;
+  margin-top: 0;
+  padding-top: 0;
+}
 
 .linkMenu {
   color: #000000;

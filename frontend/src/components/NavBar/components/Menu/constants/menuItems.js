@@ -13,7 +13,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 3,
-    textItem: 'Accesorios'
+    textItem: 'Alhajas'
   },
   {
     id: 4,

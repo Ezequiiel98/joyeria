@@ -2,9 +2,9 @@ import React from 'react';
 
 import styles from './index.module.scss';
 
-export default function MenuItem({ text }) {
+export default function MenuItem({ text, column }) {
   return (
-    <li className={styles.itemMenu}>
+    <li className={ column ? styles.itemMenuColumn : styles.itemMenu}>
       <a href="#null" className={styles.linkMenu}>
         {text}
       </a>

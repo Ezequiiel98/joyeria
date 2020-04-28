@@ -10,7 +10,7 @@ export default function Menu({ column, redes }) {
   return (
     <ul className={column ? styles.menuColumn : styles.menu}>
       {MENU_ITEMS.map(item => (
-        <MenuItem key={item.id} text={item.textItem} />
+        <MenuItem key={item.id} text={item.textItem} column={column} />
       ))}
     </ul>
   );
