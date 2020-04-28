@@ -13,19 +13,14 @@ export default function Footer() {
         <p>asdsadasdsadas</p>
         <p>asdsadasdsadas</p>
       </div>
-      <div>
-        <h4>Newsletter</h4>
-        <p>asdsadasdsadas</p>
-        <p>asdsadasdsadas</p>
-        <p>asdsadasdsadas</p>
-      </div>
+    
       <div className="">
         <h4>Menu</h4>
         <Menu column />
       </div>
       <div className="">
         <h4>Redes</h4>
-        <Menu column />
+        <Menu column socialNetwork />
       </div>
     </div>
   );

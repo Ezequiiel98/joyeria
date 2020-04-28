@@ -1,45 +1,51 @@
-export const MENU_ITEMS = [
+import { faFacebookSquare, faInstagram, faPinterestSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+
+export const NAV_MENU = [
   {
-    id: 0,
+    key: 0,
     textItem: 'Home'
   },
   {
-    id: 1,
+    key: 1,
     textItem: 'Anillos'
   },
   {
-    id: 2,
+    key: 2,
     textItem: 'Relojes'
   },
   {
-    id: 3,
+    key: 3,
     textItem: 'Alhajas'
   },
   {
-    id: 4,
+    key: 4,
     textItem: 'Contacto'
   }
 ];
 
 export const SOCIAL_MENU = [
   {
-    id: 0,
-    textItem: 'Home'
+    key: 0,
+    textItem: 'Facebook',
+    icon: faFacebookSquare,
+    urlProfile: 'https://facebook.com'
   },
   {
-    id: 1,
-    textItem: 'Anillos'
+    key: 1,
+    textItem: 'Instagram',
+    icon: faInstagram,
+    urlProfile: 'https://instagram.com'
   },
   {
-    id: 2,
-    textItem: 'Relojes'
+    key: 2,
+    textItem: 'Pinterest',
+    icon: faPinterestSquare,
+    urlProfile: 'https://pinterest.com'
   },
   {
-    id: 3,
-    textItem: 'Accesorios'
-  },
-  {
-    id: 4,
-    textItem: 'Contacto'
+    key: 3,
+    textItem: 'Twitter',
+    icon: faTwitterSquare,
+    urlProfile: 'https://twitter.com/'
   }
 ];
