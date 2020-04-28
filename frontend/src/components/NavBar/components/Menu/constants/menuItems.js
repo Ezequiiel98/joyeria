@@ -26,10 +26,11 @@ export const NAV_MENU = [
 export const SOCIAL_MENU = [
   {
     key: 0,
-    textItem: 'Facebook',
-    icon: faFacebookSquare,
-    urlProfile: 'https://facebook.com'
+    textItem: 'Twitter',
+    icon: faTwitterSquare,
+    urlProfile: 'https://twitter.com/'
   },
+ 
   {
     key: 1,
     textItem: 'Instagram',
@@ -38,14 +39,13 @@ export const SOCIAL_MENU = [
   },
   {
     key: 2,
+    textItem: 'Facebook',
+    icon: faFacebookSquare,
+    urlProfile: 'https://facebook.com',
+  }, {
+    key: 3,
     textItem: 'Pinterest',
     icon: faPinterestSquare,
     urlProfile: 'https://pinterest.com'
-  },
-  {
-    key: 3,
-    textItem: 'Twitter',
-    icon: faTwitterSquare,
-    urlProfile: 'https://twitter.com/'
   }
 ];

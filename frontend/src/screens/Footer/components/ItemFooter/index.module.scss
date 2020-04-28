@@ -1,3 +1,8 @@
 .box{
   padding: 2rem;
 }
+
+.boxTitleCenter{
+  @extend .box;
+  text-align: center;
+}

@@ -13,11 +13,11 @@ export default function Footer() {
         <Newsletter />
       </ItemFooter>
 
-      <ItemFooter title="Menu">
+      <ItemFooter title="Menu" titleCenter>
         <Menu column />
       </ItemFooter>
 
-      <ItemFooter title="Redes">
+      <ItemFooter title="Redes" titleCenter>
         <Menu column socialNetwork />
       </ItemFooter>
     </footer>
