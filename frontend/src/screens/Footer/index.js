@@ -2,20 +2,14 @@ import React from 'react';
 
 import Menu from '../../components/NavBar/components/Menu';
 
+import Newsletter from './components/Newsletter';
 import styles from './index.module.scss';
 
 export default function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.box}>
-        <h4>NEWSLETTER</h4>
-        <p>
-          No te pierdas todas nuestras novedades y los mejores descuentos
-          <form>
-            <input placeholder="Email..." type="text" />
-            <input type="submit" value="Enviar" />
-          </form>
-        </p>
+        <Newsletter />
       </div>
 
       <div className={styles.box}>
