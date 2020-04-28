@@ -3,14 +3,13 @@ import React from 'react';
 export default function Newsletter() {
   return (
     <>
-      <h4>NEWSLETTER</h4>
-      <p>
-        No te pierdas todas nuestras novedades y los mejores descuentos
+      <div>
+        <p> No te pierdas todas nuestras novedades y los mejores descuentos</p>
         <form action="">
           <input placeholder="Email..." type="text" />
           <input type="submit" value="Enviar" />
         </form>
-      </p>
+      </div>
     </>
   );
 }

@@ -2,24 +2,24 @@ import React from 'react';
 
 import Menu from '../../components/NavBar/components/Menu';
 
+import ItemFooter from './components/ItemFooter';
 import Newsletter from './components/Newsletter';
 import styles from './index.module.scss';
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
-      <div className={styles.box}>
+    <footer className={styles.footer}>
+      <ItemFooter title="Nesletter">
         <Newsletter />
-      </div>
+      </ItemFooter>
 
-      <div className={styles.box}>
-        <h4>Menu</h4>
+      <ItemFooter title="Menu">
         <Menu column />
-      </div>
-      <div className={styles.box}>
-        <h4>Redes</h4>
+      </ItemFooter>
+
+      <ItemFooter title="Redes">
         <Menu column socialNetwork />
-      </div>
-    </div>
+      </ItemFooter>
+    </footer>
   );
 }
