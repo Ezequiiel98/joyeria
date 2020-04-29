@@ -5,7 +5,7 @@ import Hero from '../Hero';
 
 import clock from './9.jpg';
 import styles from './index.module.scss';
-
+import Relojes from '../../screens/Relojes'
 function App() {
   return (
     <>
@@ -16,6 +16,7 @@ function App() {
         title="Joyeria gold"
         reverse
       />
+      <Relojes />
     </>
   );
 }
