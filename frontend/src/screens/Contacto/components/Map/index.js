@@ -1,7 +1,6 @@
 import React from 'react';
-import { Map as MapContainer, Marker, Popup, TileLayer, Tooltip } from 'react-leaflet';
+import { Map as MapContainer, Marker, TileLayer, Tooltip } from 'react-leaflet';
 
-import 'leaflet/';
 import styles from './index.module.scss';
 
 export default function Map() {
@@ -13,10 +12,10 @@ export default function Map() {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
       <Marker openPopUp position={position}>
-      <Tooltip permanent>
-        <p>Estamos Aquí.</p>
-        <p>Vení a visitarnos.</p>
-      </Tooltip>
+        <Tooltip permanent>
+          <p>Estamos Aquí.</p>
+          <p>Vení a visitarnos.</p>
+        </Tooltip>
       </Marker>
     </MapContainer>
   );

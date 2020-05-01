@@ -1,0 +1,23 @@
+.button {
+  background-color: #fff;
+  color: #333;
+  border: 3px solid #ffc0cb;
+  text-align: center;
+  min-height: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: .5rem;
+  width: 95%;
+  height: 2rem;
+  padding-left: .5rem;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: #ffc0cb;
+  }
+}
