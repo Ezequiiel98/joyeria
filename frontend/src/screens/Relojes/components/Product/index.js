@@ -3,11 +3,11 @@ import React from 'react';
 import styles from './index.module.scss';
 import Stars from './components/Stars';
 
-export default function Product({ imgUrl, title, starts, price }) {
+export default function Product({ imgURL, title, starts, price }) {
   return (
     <div className={styles.product}>
       <div className={styles.imgProduct}>
-        <img src={imgUrl} alt="" />
+        <img src={imgURL} alt="" />
       </div>
       <div className={styles.description}>
         <h4 className={styles.descriptionTitle}>{title}</h4>
