@@ -3,7 +3,7 @@ import React from 'react';
 import Title from '../../components/Title';
 
 import Product from './components/Product';
-import CLOCKS from './constants/clocks';
+import { CLOCKS } from './constants/clocks';
 import styles from './index.module.scss';
 
 export default function Relojes() {

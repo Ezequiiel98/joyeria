@@ -1,5 +1,5 @@
 import clock0 from '../assets/img/reloj-1.jpg';
-import clock1 from '../assets/img/reloj-2.jpg';
+import clock1 from '../assets/img/reloj-6.jpg';
 import clock2 from '../assets/img/reloj-3.jpg';
 import clock3 from '../assets/img/reloj-4.jpg';
 
