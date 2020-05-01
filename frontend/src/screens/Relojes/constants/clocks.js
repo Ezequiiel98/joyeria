@@ -10,7 +10,7 @@ export const CLOCKS = [
     description: 'n',
     imgURL: clock0,
     stars: 2,
-    price: '59$'
+    price: '$59'
   },
   {
     id: 1,
@@ -18,7 +18,7 @@ export const CLOCKS = [
     description: 'n',
     imgURL: clock1,
     stars: 2,
-    price: '159$'
+    price: '$159'
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const CLOCKS = [
     description: 'n',
     imgURL: clock2,
     stars: 5,
-    price: '19$'
+    price: '$19'
   },
   {
     id: 0,
@@ -34,6 +34,6 @@ export const CLOCKS = [
     description: 'a',
     imgURL: clock3,
     stars: 3,
-    price: '79$'
+    price: '$79'
   }
 ];
