@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Map from './components/Map'
 import Field from './components/Field';
 import styles from './index.module.scss';
 
@@ -23,7 +23,7 @@ export default function Contacto() {
           Enviar
         </button>
       </form>
-      <div className={styles.map} id="mapa" />
+        <Map />
     </div>
   );
 }
