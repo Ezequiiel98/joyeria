@@ -1,0 +1,78 @@
+.contacto {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 0 1rem;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.direction {
+  align-self: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+/* 
+.diretion p,
+.form__caja label {
+  font-family: 'Roboto', sans-serif;
+} */
+
+
+.success {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: green;
+  font-size: 1.5rem;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+
+.button {
+  background-color: #fff;
+  color: #333;
+  border: 3px solid #ffc0cb;
+  text-align: center;
+  min-height: 2.5rem;
+  margin-bottom: 2rem;
+  width: 95%;
+  height: 2rem;
+  margin-top: 1rem;
+  padding-left: .5rem;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: #ffc0cb;
+  }
+}
+
+
+.map {
+  height: 85vh;
+  background-color: rgb(218, 218, 218);
+  margin-top: 5rem;
+  -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.37);
+  box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.37);
+}
