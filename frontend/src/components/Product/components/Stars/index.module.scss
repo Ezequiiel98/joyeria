@@ -1,0 +1,13 @@
+$full: #efb810;
+$empty: gray;
+
+@for $i from 1 through 5 {
+  .stars#{$i} {
+    color: $empty;
+    padding: .5rem;
+  }
+
+  .stars#{$i} .icon.icon:nth-child(-n+#{$i}) {
+    color: $full;
+  }
+}
