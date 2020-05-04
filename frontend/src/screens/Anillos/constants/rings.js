@@ -3,7 +3,7 @@ import ring1 from '../assets/img/rings/ring-5.jpg';
 import ring2 from '../assets/img/rings/ring-7.jpg';
 import ring3 from '../assets/img/rings/ring-9.jpg';
 
-export const RiNGS = [
+export const RINGS = [
   {
     id: 0,
     title: 'ring 0',
