@@ -1,0 +1,25 @@
+.field {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input,
+.textarea {
+  align-self: flex-start;
+  width: 95%;
+  height: 2rem;
+  margin-top: 1rem;
+  padding-left: .5rem;
+}
+
+.textarea {
+  height: 6rem;
+  padding: .5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
