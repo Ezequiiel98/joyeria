@@ -2,8 +2,8 @@ import React from 'react';
 
 import Title from '../../components/Title';
 import Hero from '../../components/Hero';
+import Product from '../../components/Product';
 
-import Product from './components/Product';
 import { CLOCKS } from './constants/clocks';
 import imgHero from './assets/img/reloj-4.jpg';
 
