@@ -1,7 +1,7 @@
-import clock0 from '../assets/img/reloj-1.jpg';
+import clock0 from '../assets/img/reloj-5.jpg';
 import clock1 from '../assets/img/reloj-6.jpg';
-import clock2 from '../assets/img/reloj-3.jpg';
-import clock3 from '../assets/img/reloj-4.jpg';
+import clock2 from '../assets/img/reloj-7.jpg';
+import clock3 from '../assets/img/reloj-9.jpg';
 
 export const CLOCKS = [
   {

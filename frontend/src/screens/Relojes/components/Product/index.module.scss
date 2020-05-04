@@ -8,22 +8,15 @@
 
 .imgProduct {
   flex-basis: 50%;
-}
-
-@media screen and (min-width: 768px) {
-  .product {
-    flex-direction: row;
-    margin-bottom: -2.3rem;
-  }
-
-  .product:nth-child(2n+1) {
-    flex-direction: row-reverse;
-  }
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .description {
-  padding: .5rem 1rem;
+  padding: 1rem;
+  padding-top: 0;
   flex: 1;
+  min-width: 100%;
   text-align: center;
   align-self: center;
 }
@@ -33,9 +26,25 @@
   padding: 1rem 0;
 }
 
+@media screen and (min-width: 768px) {
+  .product {
+    flex-direction: row;
+    margin-bottom: -2.3rem;
+    max-height: 70vh;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .description {
+    min-width: auto;
+  }
+}
+
+
 .price {
   padding: .5rem 1.5rem;
   color: gray;
   font-size: 1.5rem;
 }
-
