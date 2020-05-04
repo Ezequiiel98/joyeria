@@ -16,8 +16,8 @@ export default function Anillos() {
         description="Lorem ipsum t amet consectetur adipisicinelit amet consectetur adipisicinelit"
       />
       <Title title="Anillos" />
-      {RiNGS.map(clock => (
-        <Product key={clock.id} {...clock} />
+      {RiNGS.map(ring => (
+        <Product key={ring.id} {...ring} />
       ))}
     </>
   );
