@@ -1,0 +1,39 @@
+import ring0 from '../assets/img/rings/ring-3.jpg';
+import ring1 from '../assets/img/rings/ring-5.jpg';
+import ring2 from '../assets/img/rings/ring-7.jpg';
+import ring3 from '../assets/img/rings/ring-9.jpg';
+
+export const RiNGS = [
+  {
+    id: 0,
+    title: 'ring 0',
+    description: 'n',
+    imgURL: ring0,
+    stars: 4,
+    price: '$59'
+  },
+  {
+    id: 1,
+    title: 'ring 1',
+    description: 'n',
+    imgURL: ring1,
+    stars: 2,
+    price: '$159'
+  },
+  {
+    id: 2,
+    title: 'ring 2',
+    description: 'n',
+    imgURL: ring2,
+    stars: 5,
+    price: '$319'
+  },
+  {
+    id: 0,
+    title: 'ring 3',
+    description: 'a',
+    imgURL: ring3,
+    stars: 3,
+    price: '$79'
+  }
+];
