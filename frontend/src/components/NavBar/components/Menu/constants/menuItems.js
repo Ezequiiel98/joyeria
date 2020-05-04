@@ -8,23 +8,28 @@ import {
 export const NAV_MENU = [
   {
     key: 0,
-    textItem: 'Home'
+    textItem: 'Home',
+    internalPath: '/'
   },
   {
     key: 1,
-    textItem: 'Anillos'
+    textItem: 'Anillos',
+    internalPath: 'anillos'
   },
   {
     key: 2,
-    textItem: 'Relojes'
+    textItem: 'Relojes',
+    internalPath: 'relojes'
   },
   {
     key: 3,
-    textItem: 'Alhajas'
+    textItem: 'Alhajas',
+    internalPath: 'alhajas'
   },
   {
     key: 4,
-    textItem: 'Contacto'
+    textItem: 'Contacto',
+    internalPath: 'contacto'
   }
 ];
 
@@ -33,25 +38,25 @@ export const SOCIAL_MENU = [
     key: 0,
     textItem: 'Twitter',
     icon: faTwitterSquare,
-    urlProfile: 'https://twitter.com/'
+    externalPath: 'https://twitter.com/'
   },
 
   {
     key: 1,
     textItem: 'Instagram',
     icon: faInstagram,
-    urlProfile: 'https://instagram.com'
+    externalPath: 'https://instagram.com'
   },
   {
     key: 2,
     textItem: 'Facebook',
     icon: faFacebookSquare,
-    urlProfile: 'https://facebook.com'
+    externalPath: 'https://facebook.com'
   },
   {
     key: 3,
     textItem: 'Pinterest',
     icon: faPinterestSquare,
-    urlProfile: 'https://pinterest.com'
+    externalPath: 'https://pinterest.com'
   }
 ];
