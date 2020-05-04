@@ -6,8 +6,7 @@ import Relojes from '../../screens/Relojes';
 import Contacto from '../../screens/Contacto';
 import Footer from '../Footer';
 import Anillos from '../../screens/Anillos';
-
-import styles from './index.module.scss';
+import Alhajas from '../../screens/Alhajas';
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
       <Home />
       <Relojes />
       <Contacto />
+      <Alhajas />
       <Anillos />
       <Footer />
     </>
