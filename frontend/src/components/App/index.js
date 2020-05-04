@@ -4,6 +4,7 @@ import Home from '../../screens/Home';
 import NavBar from '../NavBar';
 import Relojes from '../../screens/Relojes';
 import Contacto from '../../screens/Contacto';
+import Footer from '../Footer';
 
 import styles from './index.module.scss';
 
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <Relojes />
       <Contacto />
+      <Footer />
     </>
   );
 }

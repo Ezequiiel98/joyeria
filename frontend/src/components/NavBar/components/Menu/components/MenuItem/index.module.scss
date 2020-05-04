@@ -20,6 +20,17 @@
   }
 }
 
+.itemMenuColumn {
+  @extend .itemMenu;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  padding-right: .2rem;
+  text-align: right;
+}
 
 .linkMenu {
   color: #000000;
