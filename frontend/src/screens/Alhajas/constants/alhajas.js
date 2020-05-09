@@ -6,7 +6,7 @@ import alhaja3 from '../assets/img/alhajas/alhaja-4.jpg';
 export const ALHAJAS = [
   {
     id: 0,
-    category: 'alhajas',
+    category: 'alhaja',
     title: 'alhaja 0',
     description: 'n',
     imgURL: alhaja0,
@@ -15,7 +15,7 @@ export const ALHAJAS = [
   },
   {
     id: 1,
-    category: 'alhajas',
+    category: 'alhaja',
     title: 'alhaja 1',
     description: 'n',
     imgURL: alhaja1,
@@ -24,7 +24,7 @@ export const ALHAJAS = [
   },
   {
     id: 2,
-    category: 'alhajas',
+    category: 'alhaja',
     title: 'alhaja 2',
     description: 'n',
     imgURL: alhaja2,
@@ -33,7 +33,7 @@ export const ALHAJAS = [
   },
   {
     id: 0,
-    category: 'alhajas',
+    category: 'alhaja',
     title: 'alhaja 3',
     description: 'a',
     imgURL: alhaja3,
