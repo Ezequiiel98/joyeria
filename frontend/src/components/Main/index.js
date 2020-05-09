@@ -18,9 +18,9 @@ function Main() {
       <Route exact path="/relojes" component={Relojes} />
       <Route exact path="/alhajas" component={Alhajas} />
       <Route exact path="/contacto" component={Contacto} />
-      <Route path="/anillos/:id" component={Anillo} />
-      <Route exact path="/relojes/:id" component={Reloj} />
-      <Route exact path="/alhajas/:id" component={Alhaja} />
+      <Route path="/anillo/:id" component={Anillo} />
+      <Route exact path="/reloj/:id" component={Reloj} />
+      <Route exact path="/alhaja/:id" component={Alhaja} />
     </Switch>
   );
 }

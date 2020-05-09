@@ -6,7 +6,7 @@ import clock3 from '../assets/img/reloj-9.jpg';
 export const CLOCKS = [
   {
     id: 0,
-    category: 'relojes',
+    category: 'reloj',
     title: 'Clock 0',
     description: 'n',
     imgURL: clock0,
@@ -15,7 +15,7 @@ export const CLOCKS = [
   },
   {
     id: 1,
-    category: 'relojes',
+    category: 'reloj',
     title: 'Clock 1',
     description: 'n',
     imgURL: clock1,
@@ -24,7 +24,7 @@ export const CLOCKS = [
   },
   {
     id: 2,
-    category: 'relojes',
+    category: 'reloj',
     title: 'Clock 2',
     description: 'n',
     imgURL: clock2,
@@ -33,7 +33,7 @@ export const CLOCKS = [
   },
   {
     id: 3,
-    category: 'relojes',
+    category: 'reloj',
     title: 'Clock 3',
     description: 'a',
     imgURL: clock3,
