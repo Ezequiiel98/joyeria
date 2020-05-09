@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 import Stars from './components/Stars';
 import Button from './components/Button';
 
-export default function Product({ id, imgURL, title, stars, price }) {
+export default function Product({ id, imgURL, title, stars, price, category }) {
   const handleClick = e => console.log(e.target.id);
   return (
     <div className={styles.product}>
@@ -15,7 +15,7 @@ export default function Product({ id, imgURL, title, stars, price }) {
         <h4 className={styles.descriptionTitle}>{title}</h4>
         <Stars stars={stars} />
         <p className={styles.price}> {price} </p>
-        <Button onClick={handleClick} id={id} />
+        <Button onClick={handleClick} id={id} pathProduct={category} />
       </div>
     </div>
   );

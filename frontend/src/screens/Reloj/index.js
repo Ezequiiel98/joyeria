@@ -1,10 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-export default function Reloj(props) {
-  console.log(props)
-  return (
-    <div>
-      reloj
-    </div>
-  )
+import { CLOCKS } from '../Relojes/constants/clocks';
+
+export default function Reloj({ match }) {
+  return <div>{CLOCKS[match.params.id].title}</div>;
 }

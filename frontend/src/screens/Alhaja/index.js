@@ -1,5 +1,8 @@
 import React from 'react';
 
-export default function Alhaja() {
-  return <p>Alhaja</p>;
+import { ALHAJAS } from '../Alhajas/constants/alhajas';
+
+export default function Alhaja({ match }) {
+  return <div>{ALHAJAS[match.params.id].title}</div>;
 }
+

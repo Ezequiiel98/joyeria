@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import styles from './index.module.scss';
 
-export default function Button({ id, onClick }) {
+export default function Button({ id, onClick, pathProduct}) {
   return (
-    <button className={styles.button} id={id} type="button" onClick={onClick}>
-      <a href="#">Ver más</a>
-    </button>
+    <Link  to={`${pathProduct}/${id}`} className={styles.button}  onClick={onClick}>
+       <span>Ver Más</span>
+    </Link>
   );
 }

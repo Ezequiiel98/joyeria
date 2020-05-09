@@ -14,22 +14,22 @@ export const NAV_MENU = [
   {
     key: 1,
     textItem: 'Anillos',
-    internalPath: 'anillos'
+    internalPath: '/anillos'
   },
   {
     key: 2,
     textItem: 'Relojes',
-    internalPath: 'relojes'
+    internalPath: '/relojes'
   },
   {
     key: 3,
     textItem: 'Alhajas',
-    internalPath: 'alhajas'
+    internalPath: '/alhajas'
   },
   {
     key: 4,
     textItem: 'Contacto',
-    internalPath: 'contacto'
+    internalPath: '/contacto'
   }
 ];
 

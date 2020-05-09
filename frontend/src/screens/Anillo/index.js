@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Anillo() {
-  return <p>Anillo</p>;
+import { RINGS } from '../Anillos/constants/rings';
+
+export default function Anillo({ match }) {
+  return <div>{RINGS[match.params.id].title}</div>;
 }
