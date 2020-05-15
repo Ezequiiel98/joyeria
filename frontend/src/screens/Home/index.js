@@ -8,6 +8,7 @@ import imgHero2 from './assets/img/hero2.jpg';
 import { CARDS_IMG, CARDS_ICON } from './constants/cards';
 import AboutUs from './components/AboutUs';
 import Cards from './components/Cards';
+import styles from './index.module.scss';
 
 export default function Home() {
   return (

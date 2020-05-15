@@ -13,42 +13,43 @@
     cursor: pointer;
   }
 
-  &:active{
+  &:active {
     outline: none;
   }
-}
 
-.button::after,
-.button::before {
-  content: ' ';
-  width: 51%;
-  height: 0%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  background-color: #ffc0cb;
-  transition: all .4s ease;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  -o-transition: all .4s ease;
-}
+  &::after,
+  &::before {
+    content: ' ';
+    width: 51%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: #ffc0cb;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+  }
 
-.button::before {
-  top: 0;
-  left: auto;
-  right: 0;
-}
+  &::before {
+    top: 0;
+    left: auto;
+    right: 0;
+  }
 
-.button:hover::after,
-.button:hover::before {
-  height: 100%;
-}
+  &:hover::after,
+  &:hover::before {
+    height: 100%;
+  }
 
-.button span{
-  position: relative;
-  font-size: 1.25rem;
-  z-index: 1;
-  color: #333;
-  pointer-events: none;
+  & span {
+    position: relative;
+    font-size: 1.25rem;
+    z-index: 1;
+    color: #333;
+    pointer-events: none;
+  }
+
 }

@@ -20,7 +20,6 @@ export default function Contacto() {
         <Field type="text" textarea label="Consulta" name="name" placeHolder="Su consulta..." />
         <Button text="Enviar" />
       </form>
-
       <Map />
     </div>
   );

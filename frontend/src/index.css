@@ -20,7 +20,6 @@ a {
 }
 
 p {
-  /* font-family: var(--Font-body); */
   font-size: 1.2rem;
   line-height: 2rem;
 }
@@ -87,4 +86,7 @@ p {
 body {
   background-color: #fff;
   background-color: rgb(244, 244, 244);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
