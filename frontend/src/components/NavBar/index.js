@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Menu from './components/Menu';
+import MenuBurger from './components/MenuBurger';
 import styles from './index.module.scss';
 
 export default function NavBar() {
+  const [showMenu, setShowMenu] = useState(true);
+  useEffect(() => {
+    const showHideMenu = () => {
+      const minWidth = 768;
+      const visibilityMenu = window.innerWidth >= minWidth;
+      setShowMenu(visibilityMenu);
+    };
+    showHideMenu();
+    window.addEventListener('resize', showHideMenu);
+    return () => window.removeEventListener('resize', showHideMenu);
+  }, []);
+
   return (
     <nav className={styles.nav}>
       <div className={styles.containerNav}>
         <div className={styles.logo}>
           <p>Logo</p>
-
-          <div className={styles.burgerMenu}>
-            <span className={styles.burgerIcon} />
-            <span className={styles.burgerIcon} />
-            <span className={styles.burgerIcon} />
-          </div>
+          <MenuBurger showMenu={showMenu} setShowMenu={setShowMenu} />
         </div>
-        <Menu />
+        {showMenu && <Menu />}
       </div>
     </nav>
   );

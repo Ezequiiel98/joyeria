@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Menu from '../../components/NavBar/components/Menu';
+import Menu from '../NavBar/components/Menu';
 
 import ItemFooter from './components/ItemFooter';
 import Newsletter from './components/Newsletter';

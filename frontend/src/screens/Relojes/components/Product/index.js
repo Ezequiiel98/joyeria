@@ -2,7 +2,6 @@ import React from 'react';
 
 import styles from './index.module.scss';
 import Stars from './components/Stars';
-
 import Button from './components/Button';
 
 export default function Product({ id, imgURL, title, stars, price }) {

@@ -1,28 +1,3 @@
-.nav {
-  background-color: #fff;
-  overflow: hidden;
-  border-bottom: 1px solid #ffc0cb;
-}
-
-.containerNav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3.2px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-.logo {
-  flex: 1;
-  padding: 8px 16px;
-  align-self: flex-start;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-self: center;
-}
-
 .burgerMenu {
   justify-self: flex-end;
   font-size: 32px;
@@ -54,11 +29,9 @@
     top: 14px;
   }
 
-
   &:nth-child(3) {
     top: 28px;
   }
-
 }
 
 .burgerIconClose {
@@ -73,22 +46,16 @@
   }
 
   &:nth-child(2) {
-    transform: rotate(-45deg) translateY(-.7rem) translateX(.4rem);
-    -webkit-transform: rotate(-45deg) translateY(-.7rem) translateX(.4rem);
-    -moz-transform: rotate(-45deg) translateY(-.7rem) translateX(.4rem);
-    -ms-transform: rotate(-45deg) translateY(-.7rem) translateX(.4rem);
-    -o-transform: rotate(-45deg) translateY(-.7rem) translateX(.4rem);
-}
+    transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
+    -webkit-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
+    -moz-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
+    -ms-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
+    -o-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
+  }
 
   &:nth-child(3) {
     visibility: hidden;
   }
-}
-
-.logo>p {
-  font-size: 64px;
-  margin: 0;
-  padding: 1rem 0;
 }
 
 @media screen and (min-width: 768px) {
