@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Menu from './components/Menu';
 import MenuBurger from './components/MenuBurger';
+import ShoppingCart from '../ShoppingCart'
 import styles from './index.module.scss';
 
 export default function NavBar() {
@@ -21,6 +22,7 @@ export default function NavBar() {
 
   return (
     <nav className={styles.nav}>
+      <ShoppingCart />
       <div className={styles.containerNav}>
         <div className={styles.logo}>
           <p>Logo</p>
