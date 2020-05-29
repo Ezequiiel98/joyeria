@@ -5,13 +5,15 @@ import MenuBurger from './components/MenuBurger';
 import styles from './index.module.scss';
 
 export default function NavBar() {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+
   useEffect(() => {
     const showHideMenu = () => {
       const minWidth = 768;
       const visibilityMenu = window.innerWidth >= minWidth;
       setShowMenu(visibilityMenu);
     };
+  
     showHideMenu();
     window.addEventListener('resize', showHideMenu);
     return () => window.removeEventListener('resize', showHideMenu);
