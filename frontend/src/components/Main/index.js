@@ -1,14 +1,11 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Home from '../../screens/Home';
 import Anillos from '../../screens/Anillos';
 import Relojes from '../../screens/Relojes';
 import Alhajas from '../../screens/Alhajas';
 import Contacto from '../../screens/Contacto';
-import Anillo from '../../screens/Anillo';
-import Reloj from '../../screens/Reloj';
-import Alhaja from '../../screens/Alhaja';
 
 function Main() {
   return (
@@ -18,9 +15,7 @@ function Main() {
       <Route exact path="/relojes" component={Relojes} />
       <Route exact path="/alhajas" component={Alhajas} />
       <Route exact path="/contacto" component={Contacto} />
-      <Route path="/anillo/:id" component={Anillo} />
-      <Route exact path="/reloj/:id" component={Reloj} />
-      <Route exact path="/alhaja/:id" component={Alhaja} />
+      <Route path="/" render={()=><Redirect to='/' />} />
     </Switch>
   );
 }
