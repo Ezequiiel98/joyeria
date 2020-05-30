@@ -11,7 +11,7 @@ export const RINGS = [
     description: 'n',
     imgURL: ring0,
     stars: 4,
-    price: '$59'
+    price: 59
   },
   {
     id: 1,
@@ -20,7 +20,7 @@ export const RINGS = [
     description: 'n',
     imgURL: ring1,
     stars: 2,
-    price: '$159'
+    price: 159
   },
   {
     id: 2,
@@ -29,15 +29,15 @@ export const RINGS = [
     description: 'n',
     imgURL: ring2,
     stars: 5,
-    price: '$319'
+    price: 319
   },
   {
-    id: 0,
+    id: 3,
     category: 'anillo',
     title: 'ring 3',
     description: 'a',
     imgURL: ring3,
     stars: 3,
-    price: '$79'
+    price: 79
   }
 ];

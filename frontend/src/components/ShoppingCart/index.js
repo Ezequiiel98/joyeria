@@ -1,11 +1,46 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { connect } from 'react-redux';
+
+import { deleteProductToCart } from '../../redux/actions';
+
 import styles from './index.module.scss';
 
-export default function ShoppingCart() {
+function ShoppingCart({ cart, onClick }) {
+  const handleClick = (e, product) => {
+    e.preventDefault();
+    onClick(product);
+  };
   return (
-    <div className={styles.sc}>
-      holi  
+    <div className={styles.shoppingCart}>
+      {cart.map(product => (
+        <div key={product.id} className={styles.product}>
+          <div className={styles.containerImg}>
+            <img className={styles.img} src={product.imgURL} />
+          </div>
+          <span>{product.title}</span>
+          <span className="text-right">${product.price}</span>
+          <button className={styles.buttonDelete} type="button" onClick={e => handleClick(e, product)}>
+            <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} />
+          </button>
+        </div>
+      ))}
+      <div className={styles.totalPrice}>
+        <span>Total: $ {cart.reduce((sum, product) => sum + product.price, 0)}</span>
+      </div>
     </div>
-  )
+  );
 }
 
+const mapStateToProps = state => ({
+  cart: state
+});
+
+const mapDispatchToProps = dispatch => ({
+  onClick(product) {
+    dispatch(deleteProductToCart(product));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

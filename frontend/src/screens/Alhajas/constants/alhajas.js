@@ -11,7 +11,7 @@ export const ALHAJAS = [
     description: 'n',
     imgURL: alhaja0,
     stars: 2,
-    price: '$59'
+    price: 9
   },
   {
     id: 1,
@@ -20,7 +20,7 @@ export const ALHAJAS = [
     description: 'n',
     imgURL: alhaja1,
     stars: 2,
-    price: '$159'
+    price: 56
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const ALHAJAS = [
     description: 'n',
     imgURL: alhaja2,
     stars: 5,
-    price: '$19'
+    price: 9
   },
   {
     id: 0,
@@ -38,6 +38,6 @@ export const ALHAJAS = [
     description: 'a',
     imgURL: alhaja3,
     stars: 3,
-    price: '$79'
+    price: 9
   }
 ];

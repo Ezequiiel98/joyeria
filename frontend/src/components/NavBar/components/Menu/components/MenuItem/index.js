@@ -4,7 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './index.module.scss';
 
-export default function MenuItem({ textItem, icon, internalPath, externalPath, column }) {
+export default function MenuItem({
+  textItem,
+  icon,
+  internalPath,
+  externalPath,
+  column,
+  showMenu,
+  setShowMenu
+}) {
   return (
     <li className={column ? styles.itemMenuColumn : styles.itemMenu}>
       {externalPath ? (
@@ -12,7 +20,11 @@ export default function MenuItem({ textItem, icon, internalPath, externalPath, c
           {icon && <FontAwesomeIcon className={styles.icon} icon={icon} />} {textItem}
         </a>
       ) : (
-        <Link to={internalPath} className={styles.linkMenu}>
+        <Link
+          to={internalPath}
+          className={styles.linkMenu}
+          onClick={() => setShowMenu && setShowMenu(!showMenu)}
+        >
           {textItem}
         </Link>
       )}

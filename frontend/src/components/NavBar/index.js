@@ -14,7 +14,7 @@ export default function NavBar() {
       const visibilityMenu = window.innerWidth >= minWidth;
       setShowMenu(visibilityMenu);
     };
-  
+
     showHideMenu();
     window.addEventListener('resize', showHideMenu);
     return () => window.removeEventListener('resize', showHideMenu);
@@ -28,7 +28,7 @@ export default function NavBar() {
           <p>Logo</p>
           <MenuBurger showMenu={showMenu} setShowMenu={setShowMenu} />
         </div>
-        {showMenu && <Menu />}
+        {showMenu && <Menu showMenu={showMenu} setShowMenu={setShowMenu} />}
       </div>
     </nav>
   );

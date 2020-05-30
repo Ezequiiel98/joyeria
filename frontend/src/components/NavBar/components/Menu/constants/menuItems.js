@@ -35,26 +35,26 @@ export const NAV_MENU = [
 
 export const SOCIAL_MENU = [
   {
-    key: 0,
+    key: 5,
     textItem: 'Twitter',
     icon: faTwitterSquare,
     externalPath: 'https://twitter.com/'
   },
 
   {
-    key: 1,
+    key: 6,
     textItem: 'Instagram',
     icon: faInstagram,
     externalPath: 'https://instagram.com'
   },
   {
-    key: 2,
+    key: 7,
     textItem: 'Facebook',
     icon: faFacebookSquare,
     externalPath: 'https://facebook.com'
   },
   {
-    key: 3,
+    key: 8,
     textItem: 'Pinterest',
     icon: faPinterestSquare,
     externalPath: 'https://pinterest.com'
