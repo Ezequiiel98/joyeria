@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import ShoppingCart from '../ShoppingCart';
+
 import ButtonShoppingCart from './components/ButtonShoppingCart';
 import Menu from './components/Menu';
 import MenuBurger from './components/MenuBurger';
@@ -25,12 +26,12 @@ export default function NavBar() {
 
   return (
     <nav className={styles.nav}>
-      { showShoppingCart && <ShoppingCart /> }
       <div className={styles.containerNav}>
         <div className={styles.containerButtons}>
           <MenuBurger showMenu={showMenu} setShowMenu={setShowMenu} />
           <ButtonShoppingCart setShowShoppingCart={setShowShoppingCart} showShoppingCart={showShoppingCart} />
         </div>
+        {showShoppingCart && <ShoppingCart setShowShoppingCart={setShowShoppingCart} />}
         {showMenu && <Menu showMenu={showMenu} setShowMenu={setShowMenu} />}
       </div>
     </nav>

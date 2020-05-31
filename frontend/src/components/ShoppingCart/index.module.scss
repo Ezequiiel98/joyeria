@@ -1,20 +1,123 @@
-.shoppingCart {
-  min-width: 40vw;
-  max-height: 80vh;
-  overflow-y: scroll;
-  padding: 15px;
-  top: 85px;
-  border: 4px solid black;
-  right: 0;
-  max-width: 400px;
-  position: absolute;
-  background-color: white;
+.container {
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.616);
+  z-index: 6;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.shoppingCart {
+  min-width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 15px;
+  max-width: 400px;
+  background-color: white;
+  position: relative;
+}
 
-.totalPrice{
+@media screen and (min-width: 480px){
+  .shoppingCart{
+    min-width: 68vw;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .shoppingCart{
+    min-width: 42vw;
+  }
+}
+
+.headerCart {
+  min-width: 100%;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.buttonClose {
+  background-color: white;
+  border: 2px solid #ffc0cb;
+  padding: 5px 10px;
+  outline: #d83c56;
+
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:hover .iconClose{
+    color: #d83c56;
+  }
+ ;
+}
+
+.iconClose {
+  pointer-events: none;
+  color: #555555;
+  font-size: 30px;
+  transition: color .5s ease ;
+  -webkit-transition: color .5s ease ;
+  -moz-transition: color .5s ease ;
+  -ms-transition: color .5s ease ;
+  -o-transition: color .5s ease ;
+}
+
+.products {
+  min-height: 80%;
+  max-height: 80%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  &::-webkit-scrollbar:vertical {
+    width:10px;
+  }
+  
+  &::-webkit-scrollbar-button:increment,
+  &::-webkit-scrollbar-button {
+    display: none;
+  } 
+  
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #8f8f8f;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;  
+  }
+}
+
+.totalPrice {
+  min-height: 25%;
   font-size: 25px;
   text-align: right;
   padding: 10px;
   font-weight: lighter;
+}
+
+.cartEmpty{
+  text-align:   center;
+  font-size: 24px;
+  color: gray;
+  margin-top: 44%;
+}
+
+@media screen and (min-width: 760px){
+  .products {
+    min-height: 85%;
+    max-height: 85%;
+  }
+
+  .totalPrice {
+    min-height: 15%;
+    font-size: 25px;
+  }
 }
