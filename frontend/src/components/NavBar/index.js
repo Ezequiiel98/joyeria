@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 import ShoppingCart from '../ShoppingCart';
-
+import ButtonShoppingCart from './components/ButtonShoppingCart';
 import Menu from './components/Menu';
 import MenuBurger from './components/MenuBurger';
 import styles from './index.module.scss';
@@ -23,17 +21,15 @@ export default function NavBar() {
     return () => window.removeEventListener('resize', showHideMenu);
   }, []);
 
+  const [showShoppingCart, setShowShoppingCart] = useState(false);
+
   return (
     <nav className={styles.nav}>
-      {/*       <ShoppingCart />
-       */}{' '}
+      { showShoppingCart && <ShoppingCart /> }
       <div className={styles.containerNav}>
         <div className={styles.containerButtons}>
           <MenuBurger showMenu={showMenu} setShowMenu={setShowMenu} />
-          <button type="button" className={styles.buttonCart}>
-            <FontAwesomeIcon icon={faCartPlus} className={styles.iconCart} />
-            <span className={styles.price}>$505315</span>
-          </button>
+          <ButtonShoppingCart setShowShoppingCart={setShowShoppingCart} showShoppingCart={showShoppingCart} />
         </div>
         {showMenu && <Menu showMenu={showMenu} setShowMenu={setShowMenu} />}
       </div>

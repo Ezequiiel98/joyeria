@@ -17,6 +17,7 @@ function ShoppingCart({ cart, deleteProductToCart }) {
       {cart.map(product => (
         <ProductCart key={product.uuid} {...product} onClick={handleClick} />
       ))}
+      {cart.length === 0 && <p>No hay productos en el carrito</p>}
       <div className={styles.totalPrice}>
         <span>Total: ${cart.reduce((sum, product) => sum + product.price, 0)}</span>
       </div>

@@ -1,0 +1,44 @@
+
+.buttonCart{
+  background-color: white;
+  padding: 5px;
+  border: none;
+  outline: none;
+  
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:hover .iconCart{
+    color: #d83c56;
+  }
+  &:hover .price{
+    color: black;
+  }
+}
+
+.iconCart{
+  font-size: 25px;
+  color: #555555;
+  transition: color .5s ease;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+}
+
+.price{
+  display: block;
+  font-size: 15px;
+  font-weight: lighter;
+  color: #555555;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+
+  transition: color .5s ease;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+}
