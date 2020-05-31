@@ -7,10 +7,12 @@ import styles from './index.module.scss';
 import Stars from './components/Stars';
 import Button from './components/Button';
 
-function Product({ id, imgURL, title, stars, price, category, onClick }) {
+function Product({ id, imgURL, title, stars, price, category, addProductToCart }) {
   const handleClick = () => {
-    const product = { id, imgURL, title, price, category };
-    onClick(product);
+    const uuid = new Date().getTime() + Math.random();
+    const product = { id, uuid, imgURL, title, price, category };
+    console.log(product);
+    addProductToCart(product);
   };
   return (
     <div className={styles.product}>
@@ -28,7 +30,7 @@ function Product({ id, imgURL, title, stars, price, category, onClick }) {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onClick(product) {
+  addProductToCart(product) {
     dispatch(addProductToCart(product));
   }
 });

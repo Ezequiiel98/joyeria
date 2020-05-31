@@ -7,15 +7,16 @@ import { deleteProductToCart } from '../../redux/actions';
 
 import styles from './index.module.scss';
 
-function ShoppingCart({ cart, onClick }) {
+function ShoppingCart({ cart, deleteProductToCart }) {
   const handleClick = (e, product) => {
     e.preventDefault();
-    onClick(product);
+    deleteProductToCart(product);
   };
+
   return (
     <div className={styles.shoppingCart}>
       {cart.map(product => (
-        <div key={product.id} className={styles.product}>
+        <div key={product.uuid} className={styles.product}>
           <div className={styles.containerImg}>
             <img className={styles.img} src={product.imgURL} />
           </div>
@@ -27,7 +28,7 @@ function ShoppingCart({ cart, onClick }) {
         </div>
       ))}
       <div className={styles.totalPrice}>
-        <span>Total: $ {cart.reduce((sum, product) => sum + product.price, 0)}</span>
+        <span>Total: ${cart.reduce((sum, product) => sum + product.price, 0)}</span>
       </div>
     </div>
   );
@@ -38,7 +39,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onClick(product) {
+  deleteProductToCart(product) {
     dispatch(deleteProductToCart(product));
   }
 });
