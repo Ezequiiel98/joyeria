@@ -12,14 +12,16 @@
 }
 
 .containerImg {
-  height: 120px;
+  height: 110px;
   width: 120px;
   display: flex;
   align-items: center;
+  padding: 5px;
 }
 
 .img {
-  max-width: 100%;
+  max-width: calc(100% - 5px);
+  max-height: calc(100% - 5px);
   display: block;
   margin: 0 auto;
 }
