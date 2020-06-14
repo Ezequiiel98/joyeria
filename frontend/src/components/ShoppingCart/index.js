@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +12,8 @@ import styles from './index.module.scss';
 const containerShoppingCart = document.getElementById('shopping-cart');
 
 function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
+  const shoppingCartRef = useRef(null);
+
   const handleClick = (e, product) => {
     e.preventDefault();
     deleteProductToCart(product);
@@ -21,9 +23,14 @@ function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
     const keyCodeEsc = 27;
     const { id } = target;
     const pressedEsc = keyCode === keyCodeEsc;
+    const delay = 700;
 
     if (id === 'shopping-cart-container' || id === 'close-shopping-cart' || pressedEsc) {
-      setShowShoppingCart(false);
+      shoppingCartRef.current.classList.add(styles.hiddenShoppingCart);
+
+      setTimeout(() => {
+        setShowShoppingCart(false);
+      }, delay);
     }
   };
 
@@ -40,7 +47,7 @@ function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
       onKeyPress={e => handleCloseShoppingCart(e)}
       tabIndex={1}
     >
-      <div className={styles.shoppingCart}>
+      <div ref={shoppingCartRef} className={styles.shoppingCart}>
         <div className={styles.headerCart}>
           <button
             type="button"

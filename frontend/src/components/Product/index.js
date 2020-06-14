@@ -11,7 +11,7 @@ function Product({ id, imgURL, title, stars, price, category, addProductToCart }
   const handleClick = () => {
     const uuid = new Date().getTime() + Math.random();
     const product = { id, uuid, imgURL, title, price, category };
-    console.log(product);
+
     addProductToCart(product);
   };
   return (
