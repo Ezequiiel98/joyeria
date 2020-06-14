@@ -18,11 +18,11 @@ function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
   };
 
   const handleCloseShoppingCart = ({ keyCode, target }) => {
-    const keyName = keyCode;
     const keyCodeEsc = 27;
     const { id } = target;
-    const pressEsc = keyName === keyCodeEsc;
-    if (id === 'shopping-cart-container' || id === 'close-shopping-cart' || pressEsc) {
+    const pressedEsc = keyCode === keyCodeEsc;
+
+    if (id === 'shopping-cart-container' || id === 'close-shopping-cart' || pressedEsc) {
       setShowShoppingCart(false);
     }
   };
@@ -42,7 +42,12 @@ function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
     >
       <div className={styles.shoppingCart}>
         <div className={styles.headerCart}>
-          <button type="button" id="close-shopping-cart" className={styles.buttonClose} onClick={handleCloseShoppingCart}>
+          <button
+            type="button"
+            id="close-shopping-cart"
+            className={styles.buttonClose}
+            onClick={handleCloseShoppingCart}
+          >
             <FontAwesomeIcon icon={faTimes} className={styles.iconClose} />
           </button>
         </div>

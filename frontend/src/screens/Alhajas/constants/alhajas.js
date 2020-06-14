@@ -32,7 +32,7 @@ export const ALHAJAS = [
     price: 9
   },
   {
-    id: 0,
+    id: 3,
     category: 'alhaja',
     title: 'alhaja 3',
     description: 'a',

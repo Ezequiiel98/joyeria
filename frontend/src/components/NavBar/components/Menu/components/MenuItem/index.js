@@ -23,7 +23,7 @@ export default function MenuItem({
         <Link
           to={internalPath}
           className={styles.linkMenu}
-          onClick={() => setShowMenu && setShowMenu(!showMenu)}
+	      /* onClick={() => setShowMenu && setShowMenu(!showMenu)}*/
         >
           {textItem}
         </Link>

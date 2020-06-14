@@ -32,7 +32,7 @@ export default function NavBar() {
           <ButtonShoppingCart setShowShoppingCart={setShowShoppingCart} showShoppingCart={showShoppingCart} />
         </div>
         {showShoppingCart && <ShoppingCart setShowShoppingCart={setShowShoppingCart} />}
-        {showMenu && <Menu showMenu={showMenu} setShowMenu={setShowMenu} />}
+       {showMenu && <Menu />}
       </div>
     </nav>
   );

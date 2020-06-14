@@ -9,7 +9,8 @@ export default function Menu({ column, socialNetwork, showMenu, setShowMenu}) {
   return (
     <ul className={column ? styles.menuColumn : styles.menu}>
       {MENU_ITEMS.map(item => (
-        <MenuItem key={item.key} {...item} column={column} showMenu={showMenu} setShowMenu={setShowMenu} />
+	 
+	      <MenuItem key={item.key} {...item} column={column} />
       ))}
     </ul>
   );
