@@ -5,12 +5,14 @@ import { Provider } from 'react-redux';
 import './index.scss';
 
 import App from './components/App';
+import ScrollTop from './components/ScrollTop';
 import store from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
+        <ScrollTop />
         <App />
       </Router>
     </Provider>
