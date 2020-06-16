@@ -10,7 +10,7 @@ export default function ProductCart({ id, uuid, imgURL, title, price, category, 
   return (
     <div className={styles.product}>
       <div className={styles.containerImg}>
-        <img className={styles.img} src={imgURL} />
+        <img className={styles.img} src={imgURL} alt={`Imagen de ${title}`} />
       </div>
       <span className={styles.title}>{title}</span>
       <span className={styles.price}>${price}</span>

@@ -29,9 +29,11 @@ function Product({ id, imgURL, title, stars, price, category, addProductToCart }
   );
 }
 
+const mapStateToProps = state => state;
+
 const mapDispatchToProps = dispatch => ({
   addProductToCart(product) {
     dispatch(addProductToCart(product));
   }
 });
-export default connect('', mapDispatchToProps)(Product);
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

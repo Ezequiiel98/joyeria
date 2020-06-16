@@ -6,7 +6,7 @@ export default function AboutUs({ urlImg }) {
   return (
     <div className={styles.aboutUs}>
       <div className={styles.containerImg}>
-        <img src={urlImg} />
+        <img src={urlImg} alt="Imagen de hombre con reloj" />
       </div>
       <div className={styles.containerDescription}>
         <h2 className={styles.title}>Sobre nosotros</h2>

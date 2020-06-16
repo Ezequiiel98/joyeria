@@ -1,11 +1,12 @@
 .button {
+  margin: 0;
   padding: 1rem;
   border: 2px solid #ffc0cb;
   display: block;
   text-align: center;
   position: relative;
-  min-width: 90%;
-  margin: 1rem auto 0 auto;
+  min-width: 100%;
+  margin: 1rem 0 0 0;
   background-color: white;
   outline: none;
 
