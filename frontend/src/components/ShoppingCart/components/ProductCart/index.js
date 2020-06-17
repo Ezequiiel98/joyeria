@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+
+import ButtonClose from '../ButtonClose';
 
 import styles from './index.module.scss';
 
@@ -12,11 +12,14 @@ export default function ProductCart({ id, uuid, imgURL, title, price, category, 
       <div className={styles.containerImg}>
         <img className={styles.img} src={imgURL} alt={`Imagen de ${title}`} />
       </div>
-      <span className={styles.title}>{title}</span>
-      <span className={styles.price}>${price}</span>
-      <button className={styles.buttonDelete} type="button" onClick={e => onClick(e, product)}>
-        <FontAwesomeIcon className={styles.icon} icon={faTrashAlt} />
-      </button>
+      <div className={styles.containerInfoProduct}>
+        <div className={styles.headInfo}>
+          <p className={styles.title}>{title}</p>
+          <ButtonClose onClick={e => onClick(e, product)} small />
+        </div>
+        <p className={styles.quantity}>Cant: 1</p>
+        <p className={styles.price}>${price}</p>
+      </div>
     </div>
   );
 }

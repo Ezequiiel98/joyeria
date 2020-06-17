@@ -1,4 +1,4 @@
-const appState = (state = [], action) => {
+const product = (state = [], action) => {
   switch (action.type) {
     case 'ADD_PRODUCT_TO_CART':
       return state.concat(action.payload);
@@ -11,4 +11,4 @@ const appState = (state = [], action) => {
   }
 };
 
-export { appState };
+export { product };

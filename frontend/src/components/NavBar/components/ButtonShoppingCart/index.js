@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { connect } from 'react-redux';
+
+import TotalPrice from 'components/ShoppingCart/components/TotalPrice';
 
 import styles from './index.module.scss';
 
@@ -13,7 +15,7 @@ function ButtonShoppingCart({ cart, showShoppingCart, setShowShoppingCart }) {
       onClick={() => setShowShoppingCart(!showShoppingCart)}
     >
       <FontAwesomeIcon icon={faCartPlus} className={styles.iconCart} />
-      <span className={styles.price}>${cart.reduce((sum, product) => sum + product.price, 0)}</span>
+      <TotalPrice className={styles.price} products={cart} />
     </button>
   );
 }

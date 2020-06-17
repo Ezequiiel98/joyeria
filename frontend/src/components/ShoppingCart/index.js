@@ -1,23 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { deleteProductToCart } from '../../redux/actions';
 
-import ProductCart from './components/ProductCart';
+import Products from './components/Products';
+import ButtonClose from './components/ButtonClose';
+import TotalPrice from './components/TotalPrice';
 import styles from './index.module.scss';
 
 const containerShoppingCart = document.getElementById('shopping-cart');
 
-function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
+function ShoppingCart({ cart, deleteProduct, setShowShoppingCart }) {
   const shoppingCartRef = useRef(null);
-
-  const handleClick = (e, product) => {
-    e.preventDefault();
-    deleteProductToCart(product);
-  };
 
   const handleCloseShoppingCart = ({ keyCode, target }) => {
     const keyCodeEsc = 27;
@@ -44,29 +39,14 @@ function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart }) {
       className={styles.container}
       id="shopping-cart-container"
       onClick={handleCloseShoppingCart}
-      onKeyPress={e => handleCloseShoppingCart(e)}
-      tabIndex={1}
+      onKeyPress={handleCloseShoppingCart}
     >
       <div ref={shoppingCartRef} className={styles.shoppingCart}>
         <div className={styles.headerCart}>
-          <button
-            type="button"
-            id="close-shopping-cart"
-            className={styles.buttonClose}
-            onClick={handleCloseShoppingCart}
-          >
-            <FontAwesomeIcon icon={faTimes} className={styles.iconClose} />
-          </button>
+          <ButtonClose onClick={handleCloseShoppingCart} id="close-shopping-cart" />
         </div>
-        <div className={styles.products}>
-          {cart.map(product => (
-            <ProductCart key={product.uuid} {...product} onClick={handleClick} />
-          ))}
-          {cart.length === 0 && <p className={styles.cartEmpty}>El carrito esta vacio...</p>}
-        </div>
-        <div className={styles.totalPrice}>
-          <span>Total: ${cart.reduce((sum, product) => sum + product.price, 0)}</span>
-        </div>
+        <Products products={cart} deleteProduct={deleteProduct} />
+	<TotalPrice products={cart} text="Total: " className={styles.totalPrice} />
       </div>
     </div>,
     containerShoppingCart
@@ -78,7 +58,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  deleteProductToCart(product) {
+  deleteProduct(product) {
     dispatch(deleteProductToCart(product));
   }
 });

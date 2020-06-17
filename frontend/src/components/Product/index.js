@@ -29,7 +29,7 @@ function Product({ id, imgURL, title, stars, price, category, addProductToCart }
   );
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
   addProductToCart(product) {

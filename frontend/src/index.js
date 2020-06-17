@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -6,16 +6,23 @@ import './index.scss';
 
 import App from './components/App';
 import ScrollTop from './components/ScrollTop';
-import store from './redux/store';
+import store, { saveProductState } from './redux/store';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <ScrollTop />
-        <App />
-      </Router>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Root() { 
+  useEffect(() => {
+    window.addEventListener('unload', saveProductState);
+  }, []);
+
+  return (
+    <React.StrictMode>
+      <Provider store={store}>
+        <Router>
+          <ScrollTop />
+          <App />
+        </Router>
+      </Provider>
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.render(<Root />, document.getElementById('root'));
