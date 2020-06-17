@@ -28,23 +28,29 @@
   background-color: white;
   position: relative;
   animation-name: showShoppingCart;
-  animation-duration: .6s;
+  animation-duration: .7s;
 }
+
+.showShoppingCart{
+  @extend .shoppingCart;
+ }
+
 
 @keyframes hiddenShoppingCart{
  from{
-  transform: translateX(0vw);
+  transform: translateX(-1vw);
  }
  to{
-  transform: translateX(100vw);
+  transform: translateX(99vw);
  }
 }
-
 .hiddenShoppingCart {
   animation-name: hiddenShoppingCart;
-  animation-duration: .6s;
+  animation-duration: .7s;
   animation-fill-mode: forwards;
 }
+
+
 
 @media screen and (min-width: 480px){
   .shoppingCart{
