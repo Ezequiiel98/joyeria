@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 
-import { deleteProductToCart } from '../../redux/actions';
+import { deleteProductToCart } from 'redux/actions';
 
 import Products from './components/Products';
 import ButtonClose from './components/ButtonClose';
