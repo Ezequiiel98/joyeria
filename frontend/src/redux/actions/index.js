@@ -1,4 +1,9 @@
-import { ADD_PRODUCT_TO_CART, DELETE_PRODUCT_TO_CART, ADD_UNIT_TO_CART } from '../constantsTypes';
+import {
+  ADD_PRODUCT_TO_CART,
+  DELETE_PRODUCT_TO_CART,
+  ADD_UNIT_TO_CART,
+  REMOVE_UNIT_TO_CART
+} from '../constantsTypes';
 
 const addProductToCart = product => ({
   type: ADD_PRODUCT_TO_CART,
@@ -15,4 +20,9 @@ const addUnitToCart = product => ({
   payload: product
 });
 
-export { addProductToCart, deleteProductToCart, addUnitToCart };
+const removeUnitToCart = product => ({
+  type: REMOVE_UNIT_TO_CART,
+  payload: product
+});
+
+export { addProductToCart, deleteProductToCart, addUnitToCart, removeUnitToCart };

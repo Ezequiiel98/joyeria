@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware } from 'redux';
 
 import { products } from '../reducers';
-import { addUnitMiddleware } from '../middlewares';
+import { addUnitMiddleware, removeUnitMiddleware } from '../middlewares';
 
 const PRODUCT_STATE = localStorage.getItem('PRODUCT_STATE');
 const initState = JSON.parse(PRODUCT_STATE) || [];
 
-const middleware = applyMiddleware(addUnitMiddleware);
+const middleware = applyMiddleware(addUnitMiddleware, removeUnitMiddleware);
 const store = createStore(products, initState, middleware);
 
 export const saveProductState = () => {

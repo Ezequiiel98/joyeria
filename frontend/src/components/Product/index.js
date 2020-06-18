@@ -9,8 +9,7 @@ import Button from './components/Button';
 
 function Product({ id, imgURL, title, stars, price, category, addProductToCart }) {
   const handleClick = () => {
-    const uuid = new Date().getTime() + Math.random();
-    const product = { id, uuid, imgURL, title, price, category };
+    const product = { id, imgURL, title, price, category, quantity: 1 };
 
     addProductToCart(product);
   };
@@ -23,7 +22,7 @@ function Product({ id, imgURL, title, stars, price, category, addProductToCart }
         <h4 className={styles.descriptionTitle}>{title}</h4>
         <Stars stars={stars} />
         <p className={styles.price}>${price} </p>
-        <Button onClick={handleClick} id={id} category={category} />
+        <Button onClick={handleClick}  />
       </div>
     </div>
   );

@@ -5,11 +5,17 @@ import ProductCart from '../ProductCart';
 
 import styles from './index.module.scss';
 
-export default function Products({ products, deleteProduct }) {
+export default function Products({ products, deleteProductToCart, addUnitToCart, removeUnitToCart }) {
   return (
     <div className={styles.products}>
       {products.map(product => (
-        <ProductCart key={product.uuid} {...product} onClick={() => deleteProduct(product)} />
+        <ProductCart
+          key={product.id}
+          {...product}
+          onDeleteProduct={deleteProductToCart}
+          onAddUnit={addUnitToCart}
+          onRemoveUnit={removeUnitToCart}
+        />
       ))}
       {products.length === 0 && <p className={styles.cartEmpty}>El carrito esta vacio...</p>}
     </div>
@@ -17,6 +23,6 @@ export default function Products({ products, deleteProduct }) {
 }
 
 Products.propTypes = {
-  deleteProduct: PropTypes.func.isRequired,
+  deleteProductToCart: PropTypes.func.isRequired,
   products: PropTypes.instanceOf(Array).isRequired
 };

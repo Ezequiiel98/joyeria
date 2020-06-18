@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-
-import { deleteProductToCart } from 'redux/actions';
+import { deleteProductToCart, addUnitToCart, removeUnitToCart } from 'redux/actions';
 
 import Products from './components/Products';
 import ButtonClose from './components/ButtonClose';
@@ -11,7 +10,7 @@ import styles from './index.module.scss';
 
 const containerShoppingCart = document.getElementById('shopping-cart');
 
-function ShoppingCart({ cart, deleteProduct, setShowShoppingCart }) {
+function ShoppingCart({ cart, deleteProductToCart, setShowShoppingCart, addUnitToCart, removeUnitToCart }) {
   const shoppingCartRef = useRef(null);
 
   const handleCloseShoppingCart = ({ keyCode, target }) => {
@@ -45,8 +44,8 @@ function ShoppingCart({ cart, deleteProduct, setShowShoppingCart }) {
         <div className={styles.headerCart}>
           <ButtonClose onClick={handleCloseShoppingCart} id="close-shopping-cart" />
         </div>
-        <Products products={cart} deleteProduct={deleteProduct} />
-	<TotalPrice products={cart} text="Total: " className={styles.totalPrice} />
+        <Products products={cart} deleteProductToCart={deleteProductToCart} addUnitToCart={addUnitToCart} removeUnitToCart={removeUnitToCart} />
+        <TotalPrice products={cart} text="Total: " className={styles.totalPrice} />
       </div>
     </div>,
     containerShoppingCart
@@ -57,10 +56,10 @@ const mapStateToProps = state => ({
   cart: state
 });
 
-const mapDispatchToProps = dispatch => ({
-  deleteProduct(product) {
-    dispatch(deleteProductToCart(product));
-  }
-});
+const mapDispatchToProps = {
+  deleteProductToCart,
+  addUnitToCart,
+  removeUnitToCart
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

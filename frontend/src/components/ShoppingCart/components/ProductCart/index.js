@@ -4,8 +4,18 @@ import ButtonClose from '../ButtonClose';
 
 import styles from './index.module.scss';
 
-export default function ProductCart({ id, uuid, imgURL, title, price, category, quantity, onClick }) {
-  const product = { id, uuid, imgURL, title, price, category };
+export default function ProductCart({
+  id,
+  imgURL,
+  title,
+  price,
+  category,
+  quantity,
+  onDeleteProduct,
+  onAddUnit,
+  onRemoveUnit
+}) {
+  const product = { id, imgURL, title, price, category };
 
   return (
     <div className={styles.product}>
@@ -15,9 +25,18 @@ export default function ProductCart({ id, uuid, imgURL, title, price, category, 
       <div className={styles.containerInfoProduct}>
         <div className={styles.headInfo}>
           <p className={styles.title}>{title}</p>
-          <ButtonClose onClick={e => onClick(e, product)} small />
+          <ButtonClose onClick={() => onDeleteProduct(product)} small />
         </div>
-        <p className={styles.quantity}>Cant: {quantity} </p>
+        <div className={styles.quantity}>
+          {' '}
+          <button type="button" onClick={() => onAddUnit(product)}>
+            +
+          </button>{' '}
+          <span> {quantity} </span>
+          <button type="button" onClick={() => onRemoveUnit(product)}>
+            -
+          </button>
+        </div>
         <p className={styles.price}>${price}</p>
       </div>
     </div>
