@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function TotalPrice({ products, className, text }) {
-  console.log('me ejecuto');
   return (
     <div className={className}>
       <span>
