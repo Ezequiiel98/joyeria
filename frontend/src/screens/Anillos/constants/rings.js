@@ -5,7 +5,7 @@ import ring3 from '../assets/img/rings/ring-9.jpg';
 
 export const RINGS = [
   {
-    id: 0,
+    id: 7,
     category: 'anillo',
     title: 'ring 0',
     description: 'n',
@@ -14,7 +14,7 @@ export const RINGS = [
     price: 59
   },
   {
-    id: 1,
+    id: 8,
     category: 'anillo',
     title: 'ring 1',
     description: 'n',
@@ -23,7 +23,7 @@ export const RINGS = [
     price: 159
   },
   {
-    id: 2,
+    id: 9,
     category: 'anillo',
     title: 'ring 2',
     description: 'n',
@@ -32,7 +32,7 @@ export const RINGS = [
     price: 319
   },
   {
-    id: 3,
+    id: 10,
     category: 'anillo',
     title: 'ring 3',
     description: 'a',

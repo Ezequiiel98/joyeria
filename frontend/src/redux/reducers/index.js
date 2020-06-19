@@ -6,8 +6,8 @@ import {
 } from '../constantsTypes';
 
 function addRemoveUnitToCart({ state, payload, option }) {
-  const product = state.find(product => product.id === payload.id);
-  const newState = state.filter(product => product.id !== payload.id);
+  const newState = [...state];
+  const product = newState.find(product => product.id === payload.id);
 
   if (option === 'add') {
     product.price += product.price / product.quantity;
@@ -17,7 +17,7 @@ function addRemoveUnitToCart({ state, payload, option }) {
     product.quantity -= 1;
   }
 
-  return newState.concat(product);
+  return newState;
 }
 
 const products = (state = [], { type, payload }) => {

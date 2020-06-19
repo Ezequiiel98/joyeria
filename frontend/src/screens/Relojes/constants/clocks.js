@@ -5,25 +5,25 @@ import clock3 from '../assets/img/reloj-9.jpg';
 
 export const CLOCKS = [
   {
-    id: 0,
+    id: 4,
     category: 'reloj',
     title: 'Clock 0',
     description: 'n',
     imgURL: clock0,
     stars: 2,
-    price: 59
+    price: 1091159
   },
   {
-    id: 1,
+    id: 5,
     category: 'reloj',
     title: 'Clock 1',
     description: 'n',
     imgURL: clock1,
     stars: 2,
-    price: 159
+    price: 159550
   },
   {
-    id: 2,
+    id: 6,
     category: 'reloj',
     title: 'Clock 2',
     description: 'n',
@@ -32,7 +32,7 @@ export const CLOCKS = [
     price: 19
   },
   {
-    id: 3,
+    id: 7,
     category: 'reloj',
     title: 'Clock 3',
     description: 'a',

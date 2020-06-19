@@ -1,8 +1,8 @@
 .hero {
+  width: 100%; 
   min-height: 86vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .container {
@@ -31,6 +31,10 @@
 }
 
 @media screen and (min-width:768px) {
+  .hero{
+   background-position: center; 
+  }
+
   .container {
     -webkit-clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);
     clip-path: polygon(0 0, 77% 0, 38.8% 100%, 0% 100%);

@@ -29,11 +29,11 @@ export default function ProductCart({
         </div>
         <div className={styles.quantity}>
           {' '}
-          <button type="button" onClick={() => onAddUnit(product)}>
+          <button className={styles.buttonQuantity} type="button" onClick={() => onAddUnit(product)}>
             +
           </button>{' '}
           <span> {quantity} </span>
-          <button type="button" onClick={() => onRemoveUnit(product)}>
+          <button className={styles.buttonQuantity} ype="button" onClick={() => onRemoveUnit(product)}>
             -
           </button>
         </div>
