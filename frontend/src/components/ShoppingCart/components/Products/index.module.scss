@@ -9,7 +9,7 @@
   }
   
   &::-webkit-scrollbar:vertical {
-    width: 7px;
+    width: 5px;
   }
   
   &::-webkit-scrollbar-button:increment,
@@ -46,7 +46,7 @@
 
 @media screen and (min-width: 760px){
   .products {
-    min-height: 85%;
-    max-height: 85%;
+    min-height: 80%;
+    max-height: 80%;
   }
 }

@@ -77,17 +77,14 @@
   text-align: right;
   padding: 10px;
   font-weight: lighter;
-}
-
+  color: gray; 
+ }
 
 @media screen and (min-width: 760px){
-  .products {
-    min-height: 85%;
-    max-height: 85%;
-  }
- 
   .totalPrice {
-    min-height: 15%;
+    min-height: 20%;
     font-size: 25px;
+    padding-top: 25px;
+    font-weight: normal;
   }
 }

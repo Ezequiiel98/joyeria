@@ -27,13 +27,13 @@ export default function ProductCart({
           <p className={styles.title}>{title}</p>
           <ButtonClose onClick={() => onDeleteProduct(product)} small />
         </div>
-        <div className={styles.quantity}>
+        <div className={styles.containerQuantity}>
           {' '}
           <button className={styles.buttonQuantity} type="button" onClick={() => onAddUnit(product)}>
             +
           </button>{' '}
-          <span> {quantity} </span>
-          <button className={styles.buttonQuantity} ype="button" onClick={() => onRemoveUnit(product)}>
+          <span className={styles.quantity}> {quantity} </span>
+          <button className={styles.buttonQuantity} type="button" onClick={() => onRemoveUnit(product)}>
             -
           </button>
         </div>

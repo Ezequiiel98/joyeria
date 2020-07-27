@@ -7,9 +7,7 @@
   transition: all .5s ease;
   opacity: 1;
   padding: 3px;
-  &>*{
-    margin-right: 3px;
-  }
+   
 }
 
 .containerImg {
@@ -62,9 +60,13 @@
   max-width: 100%;
 }
 
+.containerQuantity{
+  transform: translateY(1.5px);  
+  margin: 0 3px;
+}
+
 .quantity{
   font-size: 18px; 
-  transform: translateY(1.5px);  
   margin: 0 3px;
 }
 
@@ -76,18 +78,17 @@
   transition: background-color .5s ease;
   width: 30px;
   height: 30px;
- 
- &:hover{
+  color: gray;
+
+  &:hover{
    cursor: pointer;
    background-color: #FFC0CB;
+   color: white;
+   font-weight: bold; 
  }
 }
 
 @media screen and (min-width: 768px){
-  .quantity{
-   margin: 0 5px;
-  }
-
   .buttonQuantity{
    border-width: 2px;
   }
