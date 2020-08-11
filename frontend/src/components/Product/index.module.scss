@@ -4,12 +4,20 @@
   display: flex;
   flex-direction: column;
   background-color: white;
+  max-height: 100vh;
 }
 
 .imgProduct {
   flex-basis: 50%;
   max-height: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.placeholder{
+  background: red;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .description {
