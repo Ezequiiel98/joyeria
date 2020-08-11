@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 export default function Contacto() {
   return (
     <div className={styles.contacto}>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={e => e.preventDefault()}>
         <div className={styles.direction}>
           <p>Buenos Aires </p>
           <p> 45 789-635 </p>
