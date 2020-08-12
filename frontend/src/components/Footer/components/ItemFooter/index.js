@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './index.module.scss';
 
@@ -10,3 +11,8 @@ export default function ItemFooter({ title, titleCenter, children }) {
     </div>
   );
 }
+
+ItemFooter.propTypes = {
+  title: PropTypes.string.isRequired,
+  titleCenter: PropTypes.bool
+};

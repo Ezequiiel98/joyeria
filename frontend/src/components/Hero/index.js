@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './index.module.scss';
 
@@ -15,4 +16,11 @@ export default function Hero({ image, title, description, reverse }) {
       </div>
     </div>
   );
+}
+
+Hero.propTypes = {
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  reverse: PropTypes.bool
 }
