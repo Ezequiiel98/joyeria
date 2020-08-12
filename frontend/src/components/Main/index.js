@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import PageLoader from '../PageLoader';
+
 const Home = lazy(() => import('screens/Home'));
 const Anillos = lazy(() => import('screens/Anillos'));
 const Relojes = lazy(() => import('screens/Relojes'));
@@ -10,13 +12,7 @@ const Contacto = lazy(() => import('screens/Contacto'));
 function Main() {
   return (
     <main>
-      <Suspense
-        fallback={
-          <div style={{ minHeight: '100vh' }}>
-            <span>Cargando...</span>
-          </div>
-        }
-      >
+      <Suspense fallback={<PageLoader />}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/anillos" component={Anillos} />

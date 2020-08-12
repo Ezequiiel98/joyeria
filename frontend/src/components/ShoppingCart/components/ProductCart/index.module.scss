@@ -15,15 +15,17 @@
   width: 120px;
   display: flex;
   align-items: center;
-  padding: 5px;
+  margin: 5px;
+  overflow: hidden;
+ 
+  &>img {
+    max-width: calc(100% - 5px);
+    max-height: calc(100% - 5px);
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.img {
-  max-width: calc(100% - 5px);
-  max-height: calc(100% - 5px);
-  display: block;
-  margin: 0 auto;
-}
 
 .containerInfoProduct {
   display: flex;

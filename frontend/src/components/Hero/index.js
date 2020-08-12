@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 
 export default function Hero({ image, title, description, reverse }) {
   const backgroundImage = { style: { backgroundImage: `url(${image}` } };
-
+  
   return (
     <div className={styles.hero} {...backgroundImage}>
       <div className={reverse ? styles.containerReverse : styles.container}>

@@ -17,7 +17,7 @@ export default function Products({ products, deleteProductToCart, addUnitToCart,
           onRemoveUnit={removeUnitToCart}
         />
       ))}
-      {products.length === 0 && <p className={styles.cartEmpty}>El carrito esta vacio...</p>}
+      {products.length === 0 && <p className={styles.cartEmpty}>El carrito está vacío...</p>}
     </div>
   );
 }

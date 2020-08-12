@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { addProductToCart } from '../../redux/actions';
@@ -18,7 +18,7 @@ function Product({ id, imgURL, title, stars, price, category, addProductToCart }
 
   return (
     <div className={styles.product}>
-      <Imagen className={styles.imgProduct} src={imgURL} alt={title} /> 
+      <Imagen className={styles.imgProduct} src={imgURL} alt={title} medium /> 
       <div className={styles.description}>
         <h4 className={styles.descriptionTitle}>{title}</h4>
         <Stars stars={stars} />

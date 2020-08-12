@@ -11,13 +11,10 @@
   flex-basis: 50%;
   max-height: 100%;
   overflow: hidden;
-  position: relative;
-}
 
-.placeholder{
-  background: red;
-  min-width: 100%;
-  min-height: 100%;
+  &>img{
+    min-height: 100%;
+  }
 }
 
 .description {
@@ -37,9 +34,9 @@
 @media screen and (min-width: 768px) {
   .product {
     flex-direction: row;
-    margin-bottom: -2.3rem;
+    margin-bottom: -2.05rem;
     max-height: 70vh;
-
+    
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
@@ -49,7 +46,6 @@
     min-width: auto;
   }
 }
-
 
 .price {
   padding: .5rem 1.5rem;

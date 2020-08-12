@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Imagen from '../../../Imagen';
+
 import ButtonClose from '../ButtonClose';
 
 import styles from './index.module.scss';
@@ -19,9 +21,7 @@ export default function ProductCart({
 
   return (
     <div className={styles.product}>
-      <div className={styles.containerImg}>
-        <img className={styles.img} src={imgURL} alt={`Imagen de ${title}`} />
-      </div>
+      <Imagen className={styles.containerImg} src={imgURL} alt={`Imagen de ${title}`} />
       <div className={styles.containerInfoProduct}>
         <div className={styles.headInfo}>
           <p className={styles.title}>{title}</p>

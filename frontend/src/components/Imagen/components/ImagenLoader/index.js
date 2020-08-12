@@ -1,18 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import ContentLoader from 'react-content-loader';
 
-export default function ImagenLoader({ ...props }) {
+import styles from './index.module.scss';
+
+export default function ImagenLoader({ SIZE }) {
+
   return (
     <ContentLoader 
       speed={2}
-      width={1000}
-      height={1000}
-      viewBox="0 0 1200 1200"
-      backgroundColor="#f3f3f3"
+      width={SIZE}
+      height={SIZE}
+      viewBox={`0 0 ${SIZE} ${SIZE} `}
+      backgroundColor="#cfcfcf"
       foregroundColor="#ecebeb"
-      {...props}
+      className={styles.loader}
     >
-      <rect x="0" y="0" rx="0" ry="0" width="1000" height="1000" />
+      <rect x="0" y="0" rx="0" ry="0" width={SIZE} height={SIZE} />
     </ContentLoader>
   );
 }
+
+ImagenLoader.propTypes = {
+  SIZE: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+};
+
