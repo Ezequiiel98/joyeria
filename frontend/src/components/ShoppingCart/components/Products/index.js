@@ -23,6 +23,8 @@ export default function Products({ products, deleteProductToCart, addUnitToCart,
 }
 
 Products.propTypes = {
+  addUnitToCart: PropTypes.func.isRequired,
+  removeUnitToCart: PropTypes.func.isRequired,
   deleteProductToCart: PropTypes.func.isRequired,
   products: PropTypes.instanceOf(Array).isRequired
 };

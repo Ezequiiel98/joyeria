@@ -1,6 +1,6 @@
 import React from 'react';
-
-import Imagen from '../../../Imagen';
+import PropTypes from 'prop-types';
+import Imagen from 'components/Imagen';
 
 import ButtonClose from '../ButtonClose';
 
@@ -17,6 +17,7 @@ export default function ProductCart({
   onAddUnit,
   onRemoveUnit
 }) {
+
   const product = { id, imgURL, title, price, category };
 
   return (
@@ -41,4 +42,16 @@ export default function ProductCart({
       </div>
     </div>
   );
+}
+
+ProductCart.propTypes = {
+  category: PropTypes.string,
+  id: PropTypes.number.isRequired,
+  imgURL: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number,
+  onDeleteProduct: PropTypes.func.isRequired,
+  onAddUnit: PropTypes.func.isRequired,
+  onRemoveUnit: PropTypes.func.isRequired, 
 }

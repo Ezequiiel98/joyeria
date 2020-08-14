@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { deleteProductToCart, addUnitToCart, removeUnitToCart } from 'redux/actions';
 
@@ -63,3 +64,11 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);
+
+ShoppingCart.propTypes = {
+  addUnitToCart: PropTypes.func.isRequired,
+  cart: PropTypes.instanceOf(Array).isRequired,
+  deleteProductToCart: PropTypes.func.isRequired,
+  setShowShoppingCart: PropTypes.func.isRequired,
+  removeUnitToCart: PropTypes.func.isRequired
+}

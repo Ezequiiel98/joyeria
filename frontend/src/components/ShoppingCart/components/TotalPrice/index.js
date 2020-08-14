@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function TotalPrice({ products, className, text }) {
   return (
@@ -9,4 +10,10 @@ export default function TotalPrice({ products, className, text }) {
       </span>
     </div>
   );
+}
+
+TotalPrice.propTypes = {
+  products: PropTypes.instanceOf(Array).isRequired,
+  className: PropTypes.string.isRequired,
+  text: PropTypes.string
 }
