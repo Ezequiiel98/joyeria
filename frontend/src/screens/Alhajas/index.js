@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Title from '../../components/Title';
-import Hero from '../../components/Hero';
-import Product from '../../components/Product';
+import Title from 'components/Title';
+import Hero from 'components/Hero';
+import Product from 'components/Product';
 
 import { ALHAJAS } from './constants/alhajas';
 import imgHero from './assets/img/alhajas/alhaja-5.jpg';
