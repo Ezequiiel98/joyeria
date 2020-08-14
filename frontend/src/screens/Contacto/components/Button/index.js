@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './index.module.scss';
 
@@ -8,4 +9,8 @@ export default function Button({ text }) {
       {text}
     </button>
   );
+}
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired
 }
