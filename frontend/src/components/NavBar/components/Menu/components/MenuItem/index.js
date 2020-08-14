@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -9,25 +10,25 @@ export default function MenuItem({
   icon,
   internalPath,
   externalPath,
-  column,
-  showMenu,
-  setShowMenu
+  column
 }) {
   return (
     <li className={column ? styles.itemMenuColumn : styles.itemMenu}>
-      {externalPath ? (
+      {externalPath && ( 
         <a target={icon && 'blank'} href={externalPath} className={styles.linkMenu}>
           {icon && <FontAwesomeIcon className={styles.icon} icon={icon} />} {textItem}
-        </a>
-      ) : (
-        <Link
-          to={internalPath}
-          className={styles.linkMenu}
-	      /* onClick={() => setShowMenu && setShowMenu(!showMenu)}*/
-        >
-          {textItem}
-        </Link>
-      )}
+        </a>)}
+       
+      { !externalPath && <Link to={internalPath} className={styles.linkMenu} >{textItem}</Link>}
     </li>
   );
 }
+
+MenuItem.propTypes = {
+  icon: PropTypes.string,
+  textItem: PropTypes.string,
+  internalPath: PropTypes.string,
+  externalPath: PropTypes.string,
+  column: PropTypes.bool
+}
+
