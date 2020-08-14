@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { addProductToCart } from '../../redux/actions';
@@ -36,4 +37,16 @@ const mapDispatchToProps = dispatch => ({
     dispatch(addProductToCart(product));
   }
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(Product);
+
+Product.propTypes = {
+  addProductToCart: PropTypes.func.isRequired,
+  category: PropTypes.string,
+  id: PropTypes.number.isRequired,
+  imgURL: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  stars: PropTypes.number.isRequired,
+  quantity: PropTypes.number
+}

@@ -25,7 +25,7 @@ export default function MenuItem({
 }
 
 MenuItem.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.instanceOf(Object),
   textItem: PropTypes.string,
   internalPath: PropTypes.string,
   externalPath: PropTypes.string,
