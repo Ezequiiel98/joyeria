@@ -1,6 +1,6 @@
 import React from 'react';
-
-import Title from '../../../../components/Title';
+import PropTypes from 'prop-types';
+import Title from 'components/Title';
 
 import Card from './components/Card';
 import styles from './index.module.scss';
@@ -16,4 +16,9 @@ export default function WhatWeDo({ CARDS, title }) {
       </div>
     </div>
   );
+}
+
+WhatWeDo.propTypes = {
+  CARDS: PropTypes.instanceOf(Array).isRequired,
+  title: PropTypes.string.isRequired
 }

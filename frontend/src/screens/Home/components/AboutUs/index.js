@@ -1,6 +1,6 @@
 import React from 'react';
-
-import Imagen from '../../../../components/Imagen';
+import PropTypes from 'prop-types';
+import Imagen from 'components/Imagen';
 
 import styles from './index.module.scss';
 
@@ -21,4 +21,8 @@ export default function AboutUs({ urlImg }) {
       </div>
     </div>
   );
+}
+
+AboutUs.propTypes = {
+  urlImg: PropTypes.string.isRequired
 }

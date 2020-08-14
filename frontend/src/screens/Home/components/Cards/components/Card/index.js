@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Imagen from '../../../../../../components/Imagen';
+import Imagen from 'components/Imagen';
 
 import styles from './index.module.scss';
 
@@ -16,4 +17,11 @@ export default function Card({ urlImg, icon, title, description }) {
       </div>
     </div>
   );
+}
+
+Card.propTypes = {
+  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.instanceOf(Object),
+  urlImg: PropTypes.string
 }
