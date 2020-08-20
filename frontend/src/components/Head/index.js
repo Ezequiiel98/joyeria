@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-export default function Head({ title = 'title', children }) {
+export default function Head({ title, children }) {
   return (
     <Helmet>
-      <title>{title} | Coloma</title>
+      <title>{title ? title : null} | Joyería Gold</title>
       {children}
     </Helmet>
   );
