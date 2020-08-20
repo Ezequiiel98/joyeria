@@ -28,11 +28,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  /* font-family: var(--Font-body); */
-  font-size: 1.2rem;
-  line-height: 2rem;
-}
 
 
 h1,
@@ -40,26 +35,26 @@ h2,
 h3,
 h4,
 h5 {
-font-family: 'Work Sans', sans-serif;
-  font-weight: 200;
+  font-family: 'Cardo', serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
  }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.1rem;
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 li {
@@ -68,26 +63,25 @@ li {
 
 li,
 p,
-a {
-  font-family: 'Nunito Sans', serif;
-  font-weight: lighter;
+a,
+span,
+label,
+button{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+input{
+  font-family: monospace;
 }
 
 p {
+  font-size: 1.2rem;
+  line-height: 2rem;
   padding: 0;
   margin: 0;
 }
 
-/* .rojo{
-  color: red;
-  
-}
-.rojo-border{
-  border: 1px solid red;
-}
-.desabilitado{
-  opacity: .5;
-} */
 body {
   background-color: #fff;
   background-color: rgb(244, 244, 244);
@@ -122,7 +116,7 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
+  }
 }
 
 
