@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Hero from '../../components/Hero';
+import Hero from 'components/Hero';
+import Head from 'components/Head';
 
 import imgAboutUs from './assets/img/aboutUs.jpg';
 import imgHero1 from './assets/img/hero1.jpg';
@@ -12,6 +13,7 @@ import Cards from './components/Cards';
 export default function Home() {
   return (
     <>
+      <Head title="Home" />
       <Hero
         image={imgHero1}
         title="Joyeria gold"

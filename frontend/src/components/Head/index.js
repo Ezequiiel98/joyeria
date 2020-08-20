@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 export default function Head({ title, children }) {
   return (
     <Helmet>
-      <title>{title ? title : null} | Joyería Gold</title>
+      {title ? <title>{title} | Joyería Gold </title> : <title>Joyería Gold</title>}
       {children}
     </Helmet>
   );
