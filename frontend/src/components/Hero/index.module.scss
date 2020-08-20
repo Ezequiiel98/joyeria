@@ -1,8 +1,16 @@
 .hero {
-  min-height: 86vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center ;
+  min-height: 90vh;
+ 
+  & img{
+    min-height: 90vh;
+    object-fit: cover;
+    z-index: -1;
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
 }
 
 .container {

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Imagen from 'components/Imagen';
+
 import styles from './index.module.scss';
 
 export default function Hero({ image, title, description, reverse }) {
-  const backgroundImage = { style: { backgroundImage: `url(${image}` } };
-  
   return (
-    <div className={styles.hero} {...backgroundImage}>
+    <div className={styles.hero} >
+      <Imagen src={image} />
       <div className={reverse ? styles.containerReverse : styles.container}>
         <div className={reverse ? styles.contentReverse : styles.content}>
           <h1 className={reverse ? styles.titleReverse : styles.title}>{title}</h1>

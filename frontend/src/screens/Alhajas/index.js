@@ -6,7 +6,7 @@ import Head from 'components/Head';
 import Product from 'components/Product';
 
 import { ALHAJAS } from './constants/alhajas';
-import imgHero from './assets/img/alhajas/alhaja-5.jpg';
+import imgHero from './assets/img/alhajas/alhaja-6.jpg';
 
 export default function Alhajas() {
   return (
@@ -14,7 +14,7 @@ export default function Alhajas() {
       <Head title="Alhajas" />
       <Hero
         image={imgHero}
-        title="Nuestros Alhajas"
+        title="Nuestras Alhajas"
         description="Lorem ipsum t amet consectetur adipisicinelit amet consectetur adipisicinelit"
       />
       <Title title="Alhajas" />
