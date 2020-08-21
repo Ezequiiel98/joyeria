@@ -1,11 +1,13 @@
 .hero {
   min-height: 90vh;
- 
+  overflow: hidden;
+  position: relative; 
+
   & img{
     min-height: 90vh;
     object-fit: cover;
     z-index: -1;
-    min-width: 100vw;
+    min-width: 100%;
     position: absolute;
     top: 0;
     left: 0;

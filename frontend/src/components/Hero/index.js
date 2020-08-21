@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 export default function Hero({ image, title, description, reverse }) {
   return (
     <div className={styles.hero} >
-      <Imagen src={image} />
+      <Imagen src={image} big />
       <div className={reverse ? styles.containerReverse : styles.container}>
         <div className={reverse ? styles.contentReverse : styles.content}>
           <h1 className={reverse ? styles.titleReverse : styles.title}>{title}</h1>
