@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Imagen from 'components/Imagen';
+import usePriceFormater from 'hooks/priceFormater';
 
 import ButtonClose from '../ButtonClose';
 
@@ -17,8 +18,8 @@ export default function ProductCart({
   onAddUnit,
   onRemoveUnit
 }) {
-
   const product = { id, imgURL, title, price, category };
+  const priceFormated = usePriceFormater('ARS', price);
 
   return (
     <div className={styles.product}>
@@ -38,7 +39,7 @@ export default function ProductCart({
             -
           </button>
         </div>
-        <p className={styles.price}>${price}</p>
+        <p className={styles.price}>{priceFormated}</p>
       </div>
     </div>
   );
@@ -53,5 +54,5 @@ ProductCart.propTypes = {
   quantity: PropTypes.number,
   onDeleteProduct: PropTypes.func.isRequired,
   onAddUnit: PropTypes.func.isRequired,
-  onRemoveUnit: PropTypes.func.isRequired, 
-}
+  onRemoveUnit: PropTypes.func.isRequired
+};
