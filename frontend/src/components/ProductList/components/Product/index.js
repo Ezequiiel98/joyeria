@@ -10,7 +10,7 @@ import Stars from './components/Stars';
 import Button from './components/Button';
 
 function Product({ id, imgURL, title, stars, price, category, addProductToCart }) {
-  const priceFormated = usePriceFormater('ARS', price);
+  const priceFormated = usePriceFormater(price);
 
   const handleClick = () => {
     const product = { id, imgURL, title, price, category, quantity: 1 };

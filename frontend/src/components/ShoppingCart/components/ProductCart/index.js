@@ -19,7 +19,7 @@ export default function ProductCart({
   onRemoveUnit
 }) {
   const product = { id, imgURL, title, price, category };
-  const priceFormated = usePriceFormater('ARS', price);
+  const priceFormated = usePriceFormater(price);
 
   return (
     <div className={styles.product}>

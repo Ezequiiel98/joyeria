@@ -1,4 +1,4 @@
-export default function usePriceFormater(currency = 'AR', price = 0) {
+export default function usePriceFormater(price = 0, currency = 'ARS') {
   const priceFormated = price.toLocaleString('es-ar', {
     style: 'currency',
     currency,

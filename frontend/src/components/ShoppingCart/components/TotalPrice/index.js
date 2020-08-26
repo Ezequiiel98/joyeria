@@ -4,7 +4,7 @@ import usePriceFormater from 'hooks/priceFormater';
 
 export default function TotalPrice({ products, className, text }) {
   const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
-  const price = usePriceFormater('ARS', totalPrice);
+  const price = usePriceFormater(totalPrice);
 
   return (
     <div className={className}>
