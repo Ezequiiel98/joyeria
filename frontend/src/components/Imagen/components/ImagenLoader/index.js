@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import ContentLoader from 'react-content-loader';
 
 import styles from './index.module.scss';
 
 export default function ImagenLoader({ SIZE }) {
-
   return (
-    <ContentLoader 
+    <ContentLoader
       speed={2}
       width={SIZE}
       height={SIZE}
@@ -23,6 +21,5 @@ export default function ImagenLoader({ SIZE }) {
 }
 
 ImagenLoader.propTypes = {
-  SIZE: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  SIZE: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
 };
-

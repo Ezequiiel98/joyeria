@@ -24,6 +24,10 @@
     display: block;
     margin: 0 auto;
   }
+
+  &>svg{
+    min-width: 100%;
+  }
 }
 
 
